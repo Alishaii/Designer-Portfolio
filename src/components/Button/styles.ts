@@ -19,4 +19,14 @@ export const ButtonContainer = styled.button`
     props.narrow ? "0px 7px 4px 10px" : "6px 31px 7px 31px"};
 `;
 
-export const Link = styled.a``;
+export const Link = styled.a`
+  @media (max-width: 995px) {
+    &:nth-child(1) {
+      padding-left: 40%;
+    }
+
+    &:nth-child(3) {
+      align-self: end;
+    }
+  }
+`;

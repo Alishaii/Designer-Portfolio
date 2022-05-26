@@ -2,13 +2,13 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const IntroductionContainer = styled.div`
-  ${tw`py-[60px] px-[30px] md:px-0`}
+  ${tw`py-[60px] px-[10px] md:px-0`}
 
   display: flex;
   justify-content: center;
-  gap: 60px;
+  column-gap: 60px;
+  row-gap: 40px;
   flex-wrap: wrap;
-
 `;
 
 export const ImageContainer = styled.div``;
@@ -34,7 +34,7 @@ export const FirstParagraph = styled.p`
 
 export const SecondParagraph = styled.p`
   ${tw`pb-[50px] sm:pb-[75px] md:pb-[100px]`}
-  
+
   font-family: Mudkty;
   color: white;
   font-size: 16px;
@@ -46,4 +46,12 @@ export const SocialNetworksContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+
+  @media (max-width: 995px) {
+    flex-direction: column;
+
+    &:nth-child(1) {
+      color: red;
+    }
+  }
 `;
