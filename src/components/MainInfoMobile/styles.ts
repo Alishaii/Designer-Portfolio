@@ -20,6 +20,8 @@ export const Title = styled.div`
   font-weight: 200;
   font-size: 36px;
   line-height: 120%;
+
+  margin-bottom: 40px;
 `;
 
 export const CreativeAreas = styled.div`
@@ -29,7 +31,6 @@ export const CreativeAreas = styled.div`
 export const CreativeAreasContent = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top 40px;
 `;
 
 export const CreativeAreasContentToken = styled.div`
