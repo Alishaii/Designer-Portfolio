@@ -31,11 +31,9 @@ export const MainInfo = () => {
     <MainInfoContainer>
       <CreativeAreas>CREATIVE AREAS</CreativeAreas>
       <CreativeAreasContent>
-        <CreativeAreasContentToken>UX/UI DESIGN</CreativeAreasContentToken>
+        <CreativeAreasContentToken primary>UX/UI DESIGN</CreativeAreasContentToken>
         <CreativeAreasContentToken>EDITIRIAL DESIGN</CreativeAreasContentToken>
-        <CreativeAreasContentToken primary>
-          GRAPHIC DESIGNER
-        </CreativeAreasContentToken>
+        <CreativeAreasContentToken>GRAPHIC DESIGNER</CreativeAreasContentToken>
       </CreativeAreasContent>
 
       <Projects>PROJECTS</Projects>
@@ -51,7 +49,7 @@ export const MainInfo = () => {
               {project.description}
             </ProjectsContentTokenDescription>
 
-            <ProjectsContentTokenImage src={project.img}  />
+            <ProjectsContentTokenImage src={project.img} />
           </ProjectsContentToken>
         ))}
       </ProjectsContent>

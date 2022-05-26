@@ -63,14 +63,13 @@ export const CreativeAreasContentToken = styled.div`
 
   color: ${(props: CreativeAreasContentTokenProps) =>
     props.primary ? "black" : "#FFFFFF"};
-  border-top: ${(props: CreativeAreasContentTokenProps) =>
-    props.primary ? "1px solid #89F856" : "1px solid #D5D5D5"};
-  boder-bottom: ${(props: CreativeAreasContentTokenProps) =>
+  border-bottom: ${(props: CreativeAreasContentTokenProps) =>
     props.primary ? "1px solid #89F856" : "1px solid #D5D5D5"};
   background-color: ${(props: CreativeAreasContentTokenProps) =>
     props.primary ? "#89F856" : "inherit"};
 
-  font-style: normal;
+  font-style: ${(props: CreativeAreasContentTokenProps) =>
+    props.primary ? "italic" : "normal"};
   font-weight: 200;
   font-size: 20px;
   line-height: 120%;

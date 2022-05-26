@@ -66,7 +66,7 @@ export const MainInfoMobile = () => {
             <SkillsContentTokenDescription>{skillsData.programsText}</SkillsContentTokenDescription>
             <SkillExamples>
               {skillsData.programsExamples.map((e) => (
-                <SkillExample primary={e.primary}>{e.name}</SkillExample>
+                <SkillExample key={e.id} primary={e.primary}>{e.name}</SkillExample>
               ))}
             </SkillExamples>
           </SkillsContentToken>
@@ -76,7 +76,7 @@ export const MainInfoMobile = () => {
             <SkillsContentTokenDescription>{skillsData.personalQualitiesText}</SkillsContentTokenDescription>
             <SkillExamples>
               {skillsData.personalQualitiesExamples.map((e) => (
-                <SkillExample primary={e.primary}>{e.name}</SkillExample>
+                <SkillExample key={e.id} primary={e.primary}>{e.name}</SkillExample>
               ))}
             </SkillExamples>
           </SkillsContentToken>
@@ -86,7 +86,7 @@ export const MainInfoMobile = () => {
             <SkillsContentTokenDescription>{skillsData.interestsText}</SkillsContentTokenDescription>
             <SkillExamples>
               {skillsData.interestsExamples.map((e) => (
-                <SkillExample primary={e.primary}>{e.name}</SkillExample>
+                <SkillExample key={e.id} primary={e.primary}>{e.name}</SkillExample>
               ))}
             </SkillExamples>
           </SkillsContentToken>

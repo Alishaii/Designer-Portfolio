@@ -9,7 +9,7 @@ export const MainInfoMobileContainer = styled.div`
   flex-direction: column;
   gap: 100px;
 
-  padding: 0 10px;
+  padding: 0 10px 50px 10px;
 
   font-family: Mudkty;
 `;
