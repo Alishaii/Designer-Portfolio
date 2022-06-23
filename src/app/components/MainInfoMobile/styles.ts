@@ -10,8 +10,6 @@ export const MainInfoMobileContainer = styled.div`
   gap: 100px;
 
   padding: 0 10px 50px 10px;
-
-  font-family: Mudkty;
 `;
 
 export const Title = styled.div`
@@ -63,7 +61,6 @@ export const ProjectsContent = styled.div`
 `;
 
 export const ProjectsContentToken = styled.div`
-  font-family: Mudkty;
   font-style: normal;
   font-weight: 200;
   font-size: 14px;

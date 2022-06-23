@@ -10,7 +10,6 @@ export const HeadingText = styled.div`
 
   color: white;
   text-indent: 10%;
-  font-family: Mudkty;
   font-style: italic;
   font-weight: 200;
 `;

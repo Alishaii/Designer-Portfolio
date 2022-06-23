@@ -16,8 +16,6 @@ export const MainInfoContainer = styled.div`
     "top-left top-right"
     "middle-left middle-right"
     "bottom-left bottom-right";
-
-  font-family: Mudkty;
 `;
 
 // -------------------------------------------------------------------------------------
@@ -35,8 +33,6 @@ export const CreativeAreas = styled.div`
   font-weight: 200;
   font-size: 64px;
   line-height: 120%;
-
-  border-right: 1px solid #d5d5d5;
 
   @media (max-width: 1260px) {
     font-size: 45px;
@@ -90,8 +86,6 @@ export const Projects = styled.div`
   font-size: 64px;
   line-height: 120%;
 
-  border-right: 1px solid #d5d5d5;
-
   @media (max-width: 1260px) {
     font-size: 45px;
   }
@@ -111,7 +105,6 @@ export const ProjectsContent = styled.div`
 export const ProjectsContentToken = styled.div`
   min-width: 350px;
 
-  font-family: Mudkty;
   font-style: normal;
   font-weight: 200;
   font-size: 14px;
@@ -150,8 +143,6 @@ export const Skills = styled.div`
   font-weight: 200;
   font-size: 64px;
   line-height: 120%;
-
-  border-right: 1px solid #d5d5d5;
 
   @media (max-width: 1260px) {
     font-size: 45px;

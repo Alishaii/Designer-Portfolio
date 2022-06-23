@@ -5,18 +5,9 @@ interface ButtonProps {
   narrow?: boolean;
 }
 
-export const NavbarContainner = styled.div`
-  width: 100%;
-  height: 40px;
-
-  display: flex;
-  align-items: center;
-`;
-
-export const NavbarButton = styled.button`
+export const ButtonContainer = styled.button`
   ${tw`border-2 border-white text-white hover:border-[#89F856] hover:bg-[#89F856] hover:text-black`}
 
-  font-family: Mudkty;
   border-radius: 30px;
   font-style: italic;
   font-weight: 400;
@@ -28,15 +19,13 @@ export const NavbarButton = styled.button`
 `;
 
 export const Link = styled.a`
-  &:nth-child(1) {
-    padding-left: 4%;
-  }
+  @media (max-width: 995px) {
+    &:nth-child(1) {
+      padding-left: 40%;
+    }
 
-  &:nth-child(2) {
-    padding-left: 20%;
-  }
-
-  &:nth-child(3) {
-    padding-left: 10%;
+    &:nth-child(3) {
+      align-self: end;
+    }
   }
 `;

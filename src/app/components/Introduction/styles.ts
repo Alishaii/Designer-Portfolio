@@ -24,7 +24,6 @@ export const InfoContainer = styled.div`
 `;
 
 export const FirstParagraph = styled.p`
-  font-family: Mudkty;
   color: white;
   font-size: 16px;
   font-weight: 200;
@@ -35,7 +34,6 @@ export const FirstParagraph = styled.p`
 export const SecondParagraph = styled.p`
   ${tw`pb-[50px] sm:pb-[75px] md:pb-[100px]`}
 
-  font-family: Mudkty;
   color: white;
   font-size: 16px;
   font-weight: 200;

@@ -5,15 +5,17 @@ export const projectsData = [
     year: 2022,
     description:
       "One of the most revolutionary hookahs ever made. The modern minimalistic design and non-standard forms of the hookah make it truly unique. ",
-    img: 'images/hookah.png',
+    img: "images/hookah.png",
+    link: "/project/hoob",
   },
   {
     id: 1,
-    name: "Hoob hookahs",
+    name: "Minimal",
     year: 2022,
     description:
       "One of the most revolutionary hookahs ever made. The modern minimalistic design and non-standard forms of the hookah make it truly unique. ",
-    img: 'images/minimal.png',
+    img: "images/minimal.png",
+    link: "/project/minimal",
   },
   {
     id: 2,
@@ -21,6 +23,7 @@ export const projectsData = [
     year: 2022,
     description:
       "One of the most revolutionary hookahs ever made. The modern minimalistic design and non-standard forms of the hookah make it truly unique. ",
-    img: 'images/third.png',
+    img: "images/third.png",
+    link: "/",
   },
 ];
