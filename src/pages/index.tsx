@@ -5,6 +5,7 @@ import { Heading } from "../components/Heading";
 import { Introduction } from "../components/Introduction";
 import { MainInfo } from "../components/MainInfo";
 import { MainInfoMobile } from "../components/MainInfoMobile";
+import { Navbar } from "../components/Navbar";
 import { Separator } from "../components/Separator";
 import { MainPageContainer } from "./styles";
 
@@ -13,6 +14,8 @@ export const MainPage = () => {
 
   return (
     <MainPageContainer>
+      <Navbar />
+
       <Heading />
       <Separator />
 

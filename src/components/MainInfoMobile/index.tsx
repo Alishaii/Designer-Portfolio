@@ -38,7 +38,7 @@ export const MainInfoMobile = () => {
         </CreativeAreasContent>
       </CreativeAreas>
 
-      <Projects>
+      <Projects id="projects">
         <Title>PROJECTS</Title>
         <ProjectsContent>
           {projectsData.projectsData.map((project) => (

@@ -36,7 +36,7 @@ export const MainInfo = () => {
         <CreativeAreasContentToken>GRAPHIC DESIGNER</CreativeAreasContentToken>
       </CreativeAreasContent>
 
-      <Projects>PROJECTS</Projects>
+      <Projects id="projects">PROJECTS</Projects>
       <ProjectsContent>
         {projectsData.projectsData.map((project) => (
           <ProjectsContentToken key={project.id}>

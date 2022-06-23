@@ -10,7 +10,7 @@ interface ButtonProps {
 export const Button = ({ narrow, href, text }: ButtonProps) => {
   return (
     <Link href={href}>
-      <ButtonContainer>{text}</ButtonContainer>
+      <ButtonContainer narrow={narrow}>{text}</ButtonContainer>
     </Link>
   );
 };

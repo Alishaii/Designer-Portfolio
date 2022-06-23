@@ -3,7 +3,7 @@ import { Br, HeadingContainer, HeadingText, Name } from "./styles";
 
 export const Heading = () => {
   return (
-    <HeadingContainer>
+    <HeadingContainer id="main">
       <HeadingText>
         HEY, I՚M <Name>ALINA</Name> <Br />
         WELCOME
