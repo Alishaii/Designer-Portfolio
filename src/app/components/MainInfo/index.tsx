@@ -32,9 +32,7 @@ export const MainInfo = () => {
     <MainInfoContainer>
       <CreativeAreas>CREATIVE AREAS</CreativeAreas>
       <CreativeAreasContent>
-        <CreativeAreasContentToken primary>
-          UX/UI DESIGN
-        </CreativeAreasContentToken>
+        <CreativeAreasContentToken primary>UX/UI DESIGN</CreativeAreasContentToken>
         <CreativeAreasContentToken>EDITIRIAL DESIGN</CreativeAreasContentToken>
         <CreativeAreasContentToken>GRAPHIC DESIGNER</CreativeAreasContentToken>
       </CreativeAreasContent>
@@ -50,9 +48,7 @@ export const MainInfo = () => {
               </ProjectsContentTokenTitle>
             </Link>
 
-            <ProjectsContentTokenDescription>
-              {project.description}
-            </ProjectsContentTokenDescription>
+            <ProjectsContentTokenDescription>{project.description}</ProjectsContentTokenDescription>
 
             <Link to={project.link}>
               <ProjectsContentTokenImage src={project.img} />
@@ -81,9 +77,7 @@ export const MainInfo = () => {
             </SkillExample>
           ))}
         </PersonalQualitiesExamples>
-        <PersonalQualitiesText>
-          {skillsData.personalQualitiesText}
-        </PersonalQualitiesText>
+        <PersonalQualitiesText>{skillsData.personalQualitiesText}</PersonalQualitiesText>
 
         <Interests>Interests</Interests>
         <InterestsExamples>

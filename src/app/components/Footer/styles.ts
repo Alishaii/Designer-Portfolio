@@ -6,4 +6,4 @@ export const FooterContainer = styled.div`
   flex-gap: 60px;
 `;
 
-export const ContactInfo = styled.p``
+export const ContactInfo = styled.p``;

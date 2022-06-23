@@ -4,8 +4,6 @@ import "./assets/fonts/Mudkty-Wtvolkolak/mudkty-wtvolkolakgrotesque-light.ttf";
 import "./index.css";
 import App from "./app/App";
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
 root.render(<App />);

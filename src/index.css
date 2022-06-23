@@ -4,9 +4,7 @@
 
 @font-face {
   font-family: "Mudkty";
-  src: local("Mudkty"),
-    url("./assets/fonts/Mudkty-Wtvolkolak/mudkty-wtvolkolakgrotesque-light.ttf")
-      format("truetype");
+  src: local("Mudkty"), url("./assets/fonts/Mudkty-Wtvolkolak/mudkty-wtvolkolakgrotesque-light.ttf") format("truetype");
 }
 
 body {
@@ -26,6 +24,5 @@ body,
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

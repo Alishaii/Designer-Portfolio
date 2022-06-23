@@ -14,8 +14,7 @@ export const ButtonContainer = styled.button`
   font-size: 14px;
   line-height: 120%;
 
-  padding: ${(props: ButtonProps) =>
-    props.narrow ? "0px 7px 4px 10px" : "6px 31px 7px 31px"};
+  padding: ${(props: ButtonProps) => (props.narrow ? "0px 7px 4px 10px" : "6px 31px 7px 31px")};
 `;
 
 export const Link = styled.a`

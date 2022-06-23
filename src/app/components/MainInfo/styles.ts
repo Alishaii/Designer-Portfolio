@@ -54,18 +54,14 @@ export const CreativeAreasContentToken = styled.div`
   display: flex;
   align-items: center;
 
-  padding-left: ${(props: CreativeAreasContentTokenProps) =>
-    props.primary ? "2%" : "0px"};
+  padding-left: ${(props: CreativeAreasContentTokenProps) => (props.primary ? "2%" : "0px")};
 
-  color: ${(props: CreativeAreasContentTokenProps) =>
-    props.primary ? "black" : "#FFFFFF"};
+  color: ${(props: CreativeAreasContentTokenProps) => (props.primary ? "black" : "#FFFFFF")};
   border-bottom: ${(props: CreativeAreasContentTokenProps) =>
     props.primary ? "1px solid #89F856" : "1px solid #D5D5D5"};
-  background-color: ${(props: CreativeAreasContentTokenProps) =>
-    props.primary ? "#89F856" : "inherit"};
+  background-color: ${(props: CreativeAreasContentTokenProps) => (props.primary ? "#89F856" : "inherit")};
 
-  font-style: ${(props: CreativeAreasContentTokenProps) =>
-    props.primary ? "italic" : "normal"};
+  font-style: ${(props: CreativeAreasContentTokenProps) => (props.primary ? "italic" : "normal")};
   font-weight: 200;
   font-size: 20px;
   line-height: 120%;
@@ -172,10 +168,8 @@ export const SkillExample = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: ${(props: SkillExampleProps) =>
-    props.primary ? "#89F856" : "inherit"};
-  border: ${(props: SkillExampleProps) =>
-    props.primary ? "1px solid #89F856" : "1px solid #ffffff"};
+  background-color: ${(props: SkillExampleProps) => (props.primary ? "#89F856" : "inherit")};
+  border: ${(props: SkillExampleProps) => (props.primary ? "1px solid #89F856" : "1px solid #ffffff")};
   color: ${(props: SkillExampleProps) => (props.primary ? "black " : "white")};
   font-weight: 200;
   font-size: 14px;

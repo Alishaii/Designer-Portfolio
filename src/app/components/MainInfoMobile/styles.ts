@@ -97,10 +97,8 @@ export const SkillExample = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: ${(props: SkillExampleProps) =>
-    props.primary ? "#89F856" : "inherit"};
-  border: ${(props: SkillExampleProps) =>
-    props.primary ? "1px solid #89F856" : "1px solid #ffffff"};
+  background-color: ${(props: SkillExampleProps) => (props.primary ? "#89F856" : "inherit")};
+  border: ${(props: SkillExampleProps) => (props.primary ? "1px solid #89F856" : "1px solid #ffffff")};
   color: ${(props: SkillExampleProps) => (props.primary ? "black " : "white")};
   font-weight: 200;
   font-size: 14px;
