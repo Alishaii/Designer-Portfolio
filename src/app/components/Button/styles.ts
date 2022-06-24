@@ -13,6 +13,7 @@ export const ButtonContainer = styled.button`
   font-weight: 400;
   font-size: 14px;
   line-height: 120%;
+  transition: all ease 0.4s;
 
   padding: ${(props: ButtonProps) => (props.narrow ? "0px 7px 4px 10px" : "6px 31px 7px 31px")};
 `;
