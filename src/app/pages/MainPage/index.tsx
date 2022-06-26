@@ -5,18 +5,18 @@ import { Heading } from "../../components/Heading";
 import { Introduction } from "../../components/Introduction";
 import { MainInfo } from "../../components/MainInfo";
 import { MainInfoMobile } from "../../components/MainInfoMobile";
-import { Navbar } from "../../components/Navbar";
 import { MainPageContainer } from "./styles";
 
-export const MainPage = () => {
-  const width = useWindowWidth();
+interface MainPageProps {
+  windowWidth: number;
+}
 
+export const MainPage: React.FC<MainPageProps> = ({ windowWidth }) => {
   return (
     <MainPageContainer>
-      <Navbar />
       <Heading />
       <Introduction />
-      {width > 903 ? <MainInfo /> : <MainInfoMobile />}
+      {windowWidth > 903 ? <MainInfo /> : <MainInfoMobile />}
       <Footer />
     </MainPageContainer>
   );

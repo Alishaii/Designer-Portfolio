@@ -14,7 +14,7 @@ export const Introduction = () => {
   return (
     <IntroductionContainer>
       <ImageContainer>
-        <Image src={"/images/main_photo.jpg"} />
+        <Image src={"/images/MainPageImages/main_photo.jpg"} />
       </ImageContainer>
 
       <InfoContainer>

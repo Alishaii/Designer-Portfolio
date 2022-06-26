@@ -7,6 +7,11 @@
   src: local("Mudkty"), url("./assets/fonts/Mudkty-Wtvolkolak/mudkty-wtvolkolakgrotesque-light.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica"), url("./assets/fonts/Helvetica/Helvetica.ttf") format("truetype");
+}
+
 body {
   background-color: #151515;
   margin: 0;

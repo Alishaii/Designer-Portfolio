@@ -21,6 +21,7 @@ import {
 } from "./styles";
 import * as projectsData from "../../constants/projectsData";
 import * as skillsData from "../../constants/skillsData";
+import { Link } from "react-router-dom";
 
 export const MainInfoMobile = () => {
   return (
@@ -41,14 +42,18 @@ export const MainInfoMobile = () => {
         <ProjectsContent>
           {projectsData.projectsData.map((project) => (
             <ProjectsContentToken key={project.id}>
-              <ProjectsContentTokenTitle>
-                <p>{project.name}</p>
-                <p>{project.year}</p>
-              </ProjectsContentTokenTitle>
+              <Link to={project.link}>
+                <ProjectsContentTokenTitle>
+                  <p>{project.name}</p>
+                  <p>{project.year}</p>
+                </ProjectsContentTokenTitle>
+              </Link>
 
               <ProjectsContentTokenDescription>{project.description}</ProjectsContentTokenDescription>
 
-              <ProjectsContentTokenImage src={project.img} />
+              <Link to={project.link}>
+                <ProjectsContentTokenImage src={project.img} />
+              </Link>
             </ProjectsContentToken>
           ))}
         </ProjectsContent>
