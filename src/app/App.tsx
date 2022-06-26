@@ -2,7 +2,6 @@ import { MainPage } from "./pages/MainPage";
 import { AppContainer } from "./styles";
 import { Routes, Route } from "react-router-dom";
 import { ErrorPage } from "./pages/ErrorPage";
-import { MinimalPage } from "./pages/Projects/Minimal/Desktop";
 import { HoobPage } from "./pages/Projects/Hoob";
 import { MinimalPageMobile } from "./pages/Projects/Minimal/Mobile";
 import { Navbar } from "./components/Navbar";

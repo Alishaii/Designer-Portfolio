@@ -1,4 +1,3 @@
-import { useWindowWidth } from "@react-hook/window-size";
 import React from "react";
 import { Footer } from "../../components/Footer";
 import { Heading } from "../../components/Heading";
