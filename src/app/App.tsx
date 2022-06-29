@@ -10,6 +10,7 @@ import { useWindowWidth } from "@react-hook/window-size";
 import { useLocation } from "react-router-dom";
 
 import { mainPageLinks, projectPageLinks } from "./constants/navbarLinks";
+import { MinimalPage } from "./pages/Projects/Minimal/Desktop";
 
 function App() {
   const windowWidth = useWindowWidth();
@@ -22,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage windowWidth={windowWidth} />} />
         <Route path="project">
-          <Route path="minimal" element={<MinimalPageMobile />} />
+          <Route path="minimal" element={windowWidth <= 800 ? <MinimalPageMobile /> : <MinimalPage />} />
           <Route path="hoob" element={<HoobPage />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
