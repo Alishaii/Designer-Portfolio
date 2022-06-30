@@ -46,3 +46,38 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.img``;
+
+export const ImageWithPadding = styled.img`
+  padding-left: 20%;
+  padding-right: 20%;
+`;
+
+export const SecondSection = styled.div`
+  display: flex;
+`;
+
+export const ThirdSection = styled.div`
+  display: flex;
+  gap: 80px;
+  padding: 0 4% 0 4%;
+`;
+
+export const Cards = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 60px;
+`;
+
+export const HelveticaText = styled.p`
+  padding-left: 23%;
+  padding-right: 23%;
+
+  color: #ffffff;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 110%;
+  text-align: center;
+  text-transform: uppercase;
+`;
