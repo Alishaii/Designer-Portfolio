@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const MinimalPageMobileContainer = styled.div`
   padding-bottom: 50px;
