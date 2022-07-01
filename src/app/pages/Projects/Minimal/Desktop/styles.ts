@@ -1,6 +1,8 @@
 import styled from "styled-components/macro";
 
-export const MinimalPageContainer = styled.div``;
+export const MinimalPageContainer = styled.div`
+  padding-bottom: 130px;
+`;
 
 export const LocationAndDateContainer = styled.div`
   display: flex;
@@ -80,4 +82,84 @@ export const HelveticaText = styled.p`
   line-height: 110%;
   text-align: center;
   text-transform: uppercase;
+`;
+
+export const SectionFour = styled.div`
+  margin-right: 20%;
+  display: flex;
+  gap: 195px;
+`;
+
+export const SectionFourFirstImage = styled.div``;
+
+export const SectionFourSecondImage = styled.div``;
+
+export const SectionFive = styled.div`
+  display: flex;
+`;
+
+export const SectionFiveFirstImage = styled.div`
+  flex: 1 1 0;
+`;
+
+export const SectionFiveSecondImage = styled.div`
+  flex: 1.4 1 0;
+`;
+
+export const SectionSix = styled.div`
+  position: relative;
+`;
+
+export const SectionSixFirstImage = styled.img`
+  padding-left: 20%;
+`;
+
+export const SectionSixSecondImage = styled.img`
+  position: absolute;
+  width: 40%;
+  height: 564;
+  left: 63px;
+  bottom: -125px;
+`;
+
+export const SectionSeven = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const SectionSevenFirstImage = styled.div``;
+
+export const SectionSevenSecondImage = styled.div`
+  position: absolute;
+`;
+
+export const Footer = styled.div`
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  font-family: Helvetica;
+  color: #ffffff;
+
+  padding: 0 4% 0 4%;
+
+  p:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+`;
+
+export const FooterToken = styled.p`
+  font-family: "Helvetica";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 110%;
+`;
+
+export const FooterPrimaryText = styled.p`
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 110%;
 `;
