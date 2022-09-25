@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import DeviceWrapper from '../context/device';
 
@@ -94,13 +94,17 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+const Title = styled.title``;
+const Meta = styled.meta``;
+const Link = styled.link``;
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Portfolio</title>
-        <meta name="description" content="Alina Barannykova Portfolio Website" />
-        <link rel="icon" href="/favicon.ico" />
+        <Title>Portfolio</Title>
+        <Meta name="description" content="Alina Barannykova Portfolio Website" />
+        <Link rel="icon" href="/favicon.ico" />
       </Head>
 
       <CssReset />
