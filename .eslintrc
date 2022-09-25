@@ -1,11 +1,17 @@
 {
+  "root": true,
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "next",
-    "prettier"
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "next/core-web-vitals"
   ],
+  "plugins": ["@typescript-eslint", "react", "react-hooks"],
   "rules": {
-    "indent": ["warn", 2]
+    "react/button-has-type": "warn",
+    "react/no-typos": "warn",
+    "react/jsx-boolean-value": "warn"
   }
 }

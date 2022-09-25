@@ -1,7 +1,10 @@
+import React from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 
 import { createGlobalStyle } from 'styled-components';
+
+import DeviceWrapper from '../context/device';
 
 const CssReset = createGlobalStyle`
   *,
@@ -62,30 +65,32 @@ const CssReset = createGlobalStyle`
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
-    font-family: Plain;
-    src: url('/fonts/Plain-Font/Plain-Regular.otf');
+    font-family: Plain Regular;
+    src: url('/fonts/Plain Regular.otf');
   }
 
   @font-face {
-    font-family: Plain;
-    src: url('/fonts/Plain-Font/Plain-Regular.otf');
+    font-family: Plain Light;
+    src: url('/fonts/Plain Light.otf');
   }
 
+  @font-face {
+    font-family: Plain Regular Italic;
+    src: url('/fonts/Plain Regular Italic.otf');
+  }
+
+  @font-face {
+    font-family: Plain Light Italic;
+    src: url('/fonts/Plain Light Italic.otf');
+  }
+
+
   body {
-    padding: 0 5.2%;
     max-width: 1920px;
     margin: 0 auto;
 
-    font-family: Plain;
-    color: var(--black-primary)
-  }
-`;
-
-const GlobalCssVariables = createGlobalStyle`
-  html {
-    --black-primary: #1C1C1C;
-    --gray-primary: #BABABA;
-    --gray-secondary: #F5F5F5; 
+    font-family: Plain Light;
+    color: black;
   }
 `;
 
@@ -94,13 +99,16 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Portfolio</title>
-        <meta name="description" content="A budget tracking app" />
+        <meta name="description" content="Alina Barannykova Portfolio Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <CssReset />
       <GlobalStyles />
-      <GlobalCssVariables />
-      <Component {...pageProps} />
+
+      <DeviceWrapper>
+        <Component {...pageProps} />
+      </DeviceWrapper>
     </>
   );
 }
