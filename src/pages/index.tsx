@@ -7,13 +7,16 @@ import { MainPageDesktop, MainPageLaptop, MainPageMobile, MainPageTablet } from 
 
 import Device from '../constants/device';
 import { useDeviceContext } from '../context/device';
+import MainPageTitle from '../components/MainPageTitle';
+import Marginer from '../components/Marginer';
+import MainPageDescription from '../components/MainPageDescription';
 
-interface HomeContainerProps {
+interface DeviceProps {
   device: Device | undefined;
 }
 
-const HomeContainer = styled.main`
-  padding: ${(props: HomeContainerProps) => {
+const HorizontalPadding = styled.div`
+  padding: ${(props: DeviceProps) => {
     switch (props.device) {
       case Device.DESKTOP: {
         return '0 6.25%';
@@ -29,6 +32,30 @@ const HomeContainer = styled.main`
       }
     }
   }};
+`;
+
+const HomeContainer = styled.main`
+  display: grid;
+  grid-template-columns: ${(props: DeviceProps) => {
+    switch (props.device) {
+      case Device.DESKTOP: {
+        return '28fr 34fr 38fr';
+      }
+      case Device.LAPTOP: {
+        return '40fr 28fr 32fr';
+      }
+      case Device.TABLET || Device.MOBILE: {
+        return '31fr 24fr 45fr';
+      }
+      default: {
+        return '33fr 33fr 33fr';
+      }
+    }
+  }};
+`;
+
+const Margin = styled.div`
+  grid-column: 1 / span 3;
 `;
 
 const Home: NextPage = () => {
@@ -56,10 +83,27 @@ const Home: NextPage = () => {
 
   return (
     <NoSsrWrapper>
-      <HomeContainer device={device}>
-        <Header device={device} />
-        {renderPage()}
-      </HomeContainer>
+      <HorizontalPadding device={device}>
+        <Header />
+        <Margin>
+          {((device === Device.DESKTOP || device === Device.LAPTOP) && <Marginer margin={30} />) ||
+            (device === Device.TABLET && <Marginer margin={7} />)}
+        </Margin>
+
+        <HomeContainer device={device}>
+          <MainPageTitle />
+          <Margin>
+            {(device === Device.DESKTOP && <Marginer margin={80} />) ||
+              (device === Device.LAPTOP && <Marginer margin={60} />) ||
+              (device === Device.TABLET && <Marginer margin={50} />) ||
+              (device === Device.MOBILE && <Marginer margin={30} />)}
+          </Margin>
+
+          <MainPageDescription />
+
+          {renderPage()}
+        </HomeContainer>
+      </HorizontalPadding>
     </NoSsrWrapper>
   );
 };

@@ -4,23 +4,60 @@ import styled from 'styled-components';
 import Button from '../Button/Button';
 
 import Device from '../../constants/device';
+import { useDeviceContext } from '../../context/device';
 
 interface HeaderProps {
   device?: Device;
 }
 
-const HeaderContainer = styled.div`
-  display: flex;
-  align-items: center;
+const HeaderContainer = styled.header`
+  display: grid;
+  grid-template-columns: ${(props: HeaderProps) => {
+    switch (props.device) {
+      case Device.DESKTOP: {
+        return '28fr 34fr 38fr';
+      }
+      case Device.LAPTOP: {
+        return '40fr 28fr 32fr';
+      }
+      case Device.TABLET: {
+        return '31fr 24fr 45fr';
+      }
+      default: {
+        return '31fr 24fr 45fr';
+      }
+    }
+  }};
+
+  @media only screen and (max-width: 639px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
   height: ${(props: HeaderProps) => (props.device === Device.MOBILE ? '82px' : '94px')};
 `;
 
-const Header: React.FC<HeaderProps> = ({ device }) => {
+const HeaderButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Header = () => {
+  const device = useDeviceContext();
+
   return (
     <HeaderContainer device={device}>
-      <Button text={'main'} />
-      <Button text={'projects'} />
-      <Button text={'contacts'} />
+      <HeaderButtonContainer>
+        <Button text={'main'} />
+      </HeaderButtonContainer>
+
+      <HeaderButtonContainer>
+        <Button text={'projects'} />
+      </HeaderButtonContainer>
+
+      <HeaderButtonContainer>
+        <Button text={'contacts'} />
+      </HeaderButtonContainer>
     </HeaderContainer>
   );
 };
