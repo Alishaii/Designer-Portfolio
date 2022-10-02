@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import Header from '../components/Header';
 import NoSsrWrapper from '../components/NoSsrWrapper';
-import { MainPageDesktop, MainPageLaptop, MainPageMobile, MainPageTablet } from '../components/MainPage';
 
 import Device from '../constants/device';
 import { useDeviceContext } from '../context/device';
@@ -11,6 +10,7 @@ import MainPageTitle from '../components/MainPageTitle';
 import Marginer from '../components/Marginer';
 import MainPageDescription from '../components/MainPageDescription';
 import MainPageCreativeAreas from '../components/MainPageCreativeAreas';
+import MainPageSkills from '../components/MainPageSkills';
 
 interface DeviceProps {
   device: Device | undefined;
@@ -62,26 +62,6 @@ const Margin = styled.div`
 const Home: NextPage = () => {
   const device = useDeviceContext();
 
-  const renderPage = () => {
-    switch (device) {
-      case Device.DESKTOP: {
-        return <MainPageDesktop />;
-      }
-      case Device.LAPTOP: {
-        return <MainPageLaptop />;
-      }
-      case Device.TABLET: {
-        return <MainPageTablet />;
-      }
-      case Device.MOBILE: {
-        return <MainPageMobile />;
-      }
-      default: {
-        return <MainPageMobile />;
-      }
-    }
-  };
-
   return (
     <NoSsrWrapper>
       <HorizontalPadding device={device}>
@@ -110,7 +90,16 @@ const Home: NextPage = () => {
 
           <MainPageCreativeAreas />
 
-          {renderPage()}
+          <Margin>
+            {(device === Device.DESKTOP && <Marginer margin={160} />) ||
+              (device === Device.LAPTOP && <Marginer margin={114} />) ||
+              (device === Device.TABLET && <Marginer margin={120} />) ||
+              (device === Device.MOBILE && <Marginer margin={80} />)}
+          </Margin>
+
+          <MainPageSkills />
+
+          
         </HomeContainer>
       </HorizontalPadding>
     </NoSsrWrapper>

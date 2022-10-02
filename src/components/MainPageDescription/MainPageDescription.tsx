@@ -66,7 +66,7 @@ const PDF = styled.p`
 
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   margin-left: 6px;
 `;
 
@@ -91,7 +91,7 @@ const Interior = (
       </Paragraph>
 
       <Paragraph>
-        <Italic>Now I&lsquo;m looking for a job in the field of ux/ui design.</Italic>
+        <Italic>Now I&lsquo;m looking for a job in the field of ux/ui design.</Italic>
       </Paragraph>
 
       <Marginer margin={50} />

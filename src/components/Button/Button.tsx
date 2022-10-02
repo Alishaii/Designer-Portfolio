@@ -11,6 +11,12 @@ const ButtonContainer = styled.div`
   border-radius: 30px;
   cursor: pointer;
   font-size: 14px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: white;
+    background-color: black;
+  }
 `;
 
 const Button: React.FC<ButtonProps> = ({ text }) => {
