@@ -10,6 +10,7 @@ import { useDeviceContext } from '../context/device';
 import MainPageTitle from '../components/MainPageTitle';
 import Marginer from '../components/Marginer';
 import MainPageDescription from '../components/MainPageDescription';
+import MainPageCreativeAreas from '../components/MainPageCreativeAreas';
 
 interface DeviceProps {
   device: Device | undefined;
@@ -100,6 +101,14 @@ const Home: NextPage = () => {
           </Margin>
 
           <MainPageDescription />
+          <Margin>
+            {(device === Device.DESKTOP && <Marginer margin={118} />) ||
+              (device === Device.LAPTOP && <Marginer margin={103} />) ||
+              (device === Device.TABLET && <Marginer margin={80} />) ||
+              (device === Device.MOBILE && <Marginer margin={80} />)}
+          </Margin>
+
+          <MainPageCreativeAreas />
 
           {renderPage()}
         </HomeContainer>
