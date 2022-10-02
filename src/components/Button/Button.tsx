@@ -10,6 +10,7 @@ const ButtonContainer = styled.div`
   border: 1px solid black;
   border-radius: 30px;
   cursor: pointer;
+  font-size: 14px;
 `;
 
 const Button: React.FC<ButtonProps> = ({ text }) => {
