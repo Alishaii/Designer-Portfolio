@@ -39,7 +39,7 @@ const ArrowUp = styled.div`
 const FooterTablet = () => {
   return (
     <>
-      <LinkedinAndEmail>
+      <LinkedinAndEmail id="footer">
         linkedin.com/alina.llbarannykova/ <br />
         alina.llbarannykova@gmail.com
       </LinkedinAndEmail>

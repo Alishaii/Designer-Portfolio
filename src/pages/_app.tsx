@@ -87,6 +87,9 @@ const GlobalStyles = createGlobalStyle`
     src: url('/fonts/Plain Light Italic.otf');
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
 
   body {
     max-width: 1920px;

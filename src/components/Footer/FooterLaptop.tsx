@@ -30,7 +30,7 @@ const ArrowUp = styled.div`
 const FooterLaptop = () => {
   return (
     <>
-      <Cell>
+      <Cell id="footer">
         <LinkedinAndEmail>
           linkedin.com/alina.llbarannykova/ <br />
           alina.llbarannykova@gmail.com

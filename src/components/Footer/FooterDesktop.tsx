@@ -27,7 +27,7 @@ const ArrowUp = styled.div`
 const FooterDesktop = () => {
   return (
     <>
-      <Cell></Cell>
+      <Cell id="footer"></Cell>
       <Cell>
         <LinkedinAndEmail>
           linkedin.com/alina.llbarannykova/ <br />

@@ -48,15 +48,15 @@ const Header = () => {
   return (
     <HeaderContainer device={device}>
       <HeaderButtonContainer>
-        <Button text={'main'} />
+        <Button trueButton link="/#main" text={'main'} />
       </HeaderButtonContainer>
 
       <HeaderButtonContainer>
-        <Button text={'projects'} />
+        <Button trueButton link="#projects" text={'projects'} />
       </HeaderButtonContainer>
 
       <HeaderButtonContainer>
-        <Button text={'contacts'} />
+        <Button trueButton link="#footer" text={'contacts'} />
       </HeaderButtonContainer>
     </HeaderContainer>
   );

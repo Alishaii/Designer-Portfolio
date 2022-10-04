@@ -25,7 +25,7 @@ const ArrowUp = styled.div`
 
 const FooterMobile = () => {
   return (
-    <FooterMobileContainer>
+    <FooterMobileContainer id="footer">
       <Marginer margin={30} />
 
       <LinkedinAndEmail>
