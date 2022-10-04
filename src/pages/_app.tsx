@@ -4,7 +4,10 @@ import type { AppProps } from 'next/app';
 
 import styled, { createGlobalStyle } from 'styled-components';
 
-import DeviceWrapper from '../context/device';
+import Device from '../constants/device';
+import Header from '../components/Header';
+import DeviceWrapper, { useDeviceContext } from '../context/device';
+import NoSsrWrapper from '../components/NoSsrWrapper';
 
 const CssReset = createGlobalStyle`
   *,
@@ -98,7 +101,32 @@ const Title = styled.title``;
 const Meta = styled.meta``;
 const Link = styled.link``;
 
+interface DeviceProps {
+  device: Device | undefined;
+}
+
+const HorizontalPadding = styled.div`
+  padding: ${(props: DeviceProps) => {
+    switch (props.device) {
+      case Device.DESKTOP: {
+        return '0 12.5%';
+      }
+      case Device.LAPTOP: {
+        return '0 4%';
+      }
+      case Device.TABLET || Device.MOBILE: {
+        return '0 3.125%';
+      }
+      default: {
+        return '0 3.125%';
+      }
+    }
+  }};
+`;
+
 function MyApp({ Component, pageProps }: AppProps) {
+  const device = useDeviceContext();
+
   return (
     <>
       <Head>
@@ -110,9 +138,14 @@ function MyApp({ Component, pageProps }: AppProps) {
       <CssReset />
       <GlobalStyles />
 
-      <DeviceWrapper>
-        <Component {...pageProps} />
-      </DeviceWrapper>
+      <NoSsrWrapper>
+        <DeviceWrapper>
+          <HorizontalPadding device={device}>
+            <Header />
+            <Component {...pageProps} />
+          </HorizontalPadding>
+        </DeviceWrapper>
+      </NoSsrWrapper>
     </>
   );
 }

@@ -6,11 +6,12 @@ interface ButtonProps {
 }
 
 const ButtonContainer = styled.div`
-  padding: 3px 16px 8px 16px;
+  padding: 4px 16px 8px 16px;
   border: 1px solid black;
   border-radius: 30px;
   cursor: pointer;
   font-size: 14px;
+  line-height: 120%;
   transition: all 0.3s ease;
 
   &:hover {
