@@ -1,6 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { interests, interestsDescription, personalQualities, personalQualitiesDescription, programs, programsDescription } from '../../constants/skills';
+import {
+  interests,
+  interestsDescription,
+  personalQualities,
+  personalQualitiesDescription,
+  programs,
+  programsDescription
+} from '../../constants/skills';
 import Button from '../Button';
 import MainPageSectionTitle from '../MainPageSectionTitle';
 import Marginer from '../Marginer';
@@ -39,6 +46,7 @@ const Skills = styled.div`
 
 const Description = styled.div`
   ${commonStyles}
+  line-height: 110%;
 `;
 
 const MainPageSkillsDesktop = () => {
@@ -61,15 +69,19 @@ const MainPageSkillsDesktop = () => {
       <Description>{programsDescription}</Description>
 
       <Category>Personal qualities</Category>
-      <Skills>{personalQualities.map((item, index) => (
+      <Skills>
+        {personalQualities.map((item, index) => (
           <Button key={index} text={item}></Button>
-        ))}</Skills>
+        ))}
+      </Skills>
       <Description>{personalQualitiesDescription}</Description>
 
       <Category>Intrrests</Category>
-      <Skills>{interests.map((item, index) => (
+      <Skills>
+        {interests.map((item, index) => (
           <Button key={index} text={item}></Button>
-        ))}</Skills>
+        ))}
+      </Skills>
       <Description>{interestsDescription}</Description>
     </>
   );

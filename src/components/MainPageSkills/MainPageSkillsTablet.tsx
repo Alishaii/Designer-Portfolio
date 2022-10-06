@@ -50,7 +50,9 @@ const Skills = styled.div`
   margin-bottom: 20px;
 `;
 
-const Description = styled.div``;
+const Description = styled.div`
+  line-height: 110%;
+`;
 
 const MainPageSkillsTablet = () => {
   return (

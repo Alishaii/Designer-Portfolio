@@ -46,7 +46,7 @@ const Header = () => {
   const device = useDeviceContext();
 
   return (
-    <HeaderContainer device={device}>
+    <HeaderContainer device={device} id="header">
       <HeaderButtonContainer>
         <Button trueButton link="/#main" text={'main'} />
       </HeaderButtonContainer>

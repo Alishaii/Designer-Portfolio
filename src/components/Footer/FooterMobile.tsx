@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import Marginer from '../Marginer';
+import Link from '../Link';
 
 const FooterMobileContainer = styled.div`
   grid-column: span 3;
@@ -40,9 +41,11 @@ const FooterMobile = () => {
           Poland, Warsaw
         </Phone>
 
-        <ArrowUp>
-          <Image src="/images/MainPage/arrow_up.svg" alt="" width={22} height={30} />
-        </ArrowUp>
+        <Link href={'#header'}>
+          <ArrowUp>
+            <Image src="/images/MainPage/arrow_up.svg" alt="" width={22} height={30} />
+          </ArrowUp>
+        </Link>
       </PhoneAndArrowUp>
     </FooterMobileContainer>
   );

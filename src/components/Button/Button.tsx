@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from '../Link';
 
 interface ButtonProps {
   trueButton?: boolean;
@@ -27,11 +28,6 @@ const ButtonContainer = styled.div`
           background-color: black;
       }`
       : ''}
-`;
-
-const Link = styled.a`
-  text-decoration: none;
-  color: inherit;
 `;
 
 const Button: React.FC<ButtonProps> = ({ trueButton, link, text }) => {

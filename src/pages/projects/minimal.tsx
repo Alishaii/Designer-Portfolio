@@ -34,11 +34,7 @@ const Margin = styled.div`
 const Home: NextPage = () => {
   const device = useDeviceContext();
 
-  return (
-    <MinimalPageContainer device={device}>
-      
-    </MinimalPageContainer>
-  );
+  return <MinimalPageContainer device={device}></MinimalPageContainer>;
 };
 
 export default Home;

@@ -104,32 +104,19 @@ const Title = styled.title``;
 const Meta = styled.meta``;
 const Link = styled.link``;
 
-interface DeviceProps {
-  device: Device | undefined;
-}
-
 const HorizontalPadding = styled.div`
-  padding: ${(props: DeviceProps) => {
-    switch (props.device) {
-      case Device.DESKTOP: {
-        return '0 12.5%';
-      }
-      case Device.LAPTOP: {
-        return '0 4%';
-      }
-      case Device.TABLET || Device.MOBILE: {
-        return '0 3.125%';
-      }
-      default: {
-        return '0 3.125%';
-      }
-    }
-  }};
+  padding: 0 3.125%;
+
+  @media only screen and (min-width: 640px) {
+    padding: 0 4%;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    padding: 0 6.25%;
+  }
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const device = useDeviceContext();
-
   return (
     <>
       <Head>
@@ -143,7 +130,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <NoSsrWrapper>
         <DeviceWrapper>
-          <HorizontalPadding device={device}>
+          <HorizontalPadding>
             <Header />
             <Component {...pageProps} />
           </HorizontalPadding>

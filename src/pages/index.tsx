@@ -9,6 +9,7 @@ import MainPageDescription from '../components/MainPageDescription';
 import MainPageCreativeAreas from '../components/MainPageCreativeAreas';
 import MainPageSkills from '../components/MainPageSkills';
 import Footer from '../components/Footer';
+import MainPageProjects from '../components/MainPageProjects';
 
 interface DeviceProps {
   device: Device | undefined;
@@ -44,8 +45,10 @@ const Home: NextPage = () => {
   return (
     <HomeContainer device={device}>
       <Margin>
-        {((device === Device.DESKTOP || device === Device.LAPTOP) && <Marginer margin={30} />) ||
-          (device === Device.TABLET && <Marginer margin={7} />)}
+        {(device === Device.DESKTOP && <Marginer margin={30} />) ||
+          (device === Device.LAPTOP && <Marginer margin={30} />) ||
+          (device === Device.TABLET && <Marginer margin={7} />) ||
+          (device === Device.MOBILE && <Marginer margin={0} />)}
       </Margin>
 
       <MainPageTitle />
@@ -69,6 +72,14 @@ const Home: NextPage = () => {
         {(device === Device.DESKTOP && <Marginer margin={160} />) ||
           (device === Device.LAPTOP && <Marginer margin={114} />) ||
           (device === Device.TABLET && <Marginer margin={120} />) ||
+          (device === Device.MOBILE && <Marginer margin={80} />)}
+      </Margin>
+
+      <MainPageProjects />
+      <Margin>
+        {(device === Device.DESKTOP && <Marginer margin={140} />) ||
+          (device === Device.LAPTOP && <Marginer margin={140} />) ||
+          (device === Device.TABLET && <Marginer margin={100} />) ||
           (device === Device.MOBILE && <Marginer margin={80} />)}
       </Margin>
 

@@ -54,6 +54,7 @@ const Skills = styled.div`
 const Description = styled.div`
   ${commonStyles}
   padding-right: 10px;
+  line-height: 110%;
 `;
 
 const MainPageSkillsLaptop = () => {

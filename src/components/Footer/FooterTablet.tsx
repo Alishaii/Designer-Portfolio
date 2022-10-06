@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
+import Link from '../Link';
 
 const LinkedinAndEmail = styled.p`
   grid-column: span 2;
@@ -49,9 +50,11 @@ const FooterTablet = () => {
           +48 536 166 614 <br />
           Poland, Warsaw
         </Phone>
-        <ArrowUp>
-          <Image src="/images/MainPage/arrow_up.svg" alt="" width={22} height={30} />
-        </ArrowUp>
+        <Link href={'#header'}>
+          <ArrowUp>
+            <Image src="/images/MainPage/arrow_up.svg" alt="" width={22} height={30} />
+          </ArrowUp>
+        </Link>
       </PhoneAndArrowUp>
     </>
   );

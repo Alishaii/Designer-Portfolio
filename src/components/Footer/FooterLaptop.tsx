@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
+import Link from '../Link';
 
 const Cell = styled.div`
   min-height: 180px;
@@ -43,9 +44,11 @@ const FooterLaptop = () => {
         </Phone>
       </Cell>
       <Cell>
-        <ArrowUp>
-          <Image src="/images/MainPage/arrow_up.svg" alt="" width={22} height={30} />
-        </ArrowUp>
+        <Link href={'#header'}>
+          <ArrowUp>
+            <Image src="/images/MainPage/arrow_up.svg" alt="" width={22} height={30} />
+          </ArrowUp>
+        </Link>
       </Cell>
     </>
   );
