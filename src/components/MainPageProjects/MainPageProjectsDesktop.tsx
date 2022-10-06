@@ -40,13 +40,18 @@ const ImageContainerRight = styled.div`
 `;
 
 const ProjectDescriptionContainerRight = styled.div`
-  padding-left: 24%;
-  padding-right: 18%;
+  padding-left: 36%;
+  padding-right: 5%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
+
+  @media only screen and (min-width: 1600px) {
+    padding-left: 24%;
+    padding-right: 18%;
+  }
 `;
 
 const ProjectName = styled.p`
@@ -56,13 +61,14 @@ const ProjectName = styled.p`
 `;
 
 const ProjectDescription = styled.p`
+  font-weight: 300;
   line-height: 110%;
 `;
 
 const MainPageProjectsDesktop = () => {
   return (
     <>
-      <Title>
+      <Title id="projects">
         <MainPageSectionTitle>PROJECTS</MainPageSectionTitle>
       </Title>
 
@@ -81,7 +87,7 @@ const MainPageProjectsDesktop = () => {
                 <ProjectDescription>{item.description}</ProjectDescription>
                 <Marginer margin={26} />
 
-                <Button text={'see more'}></Button>
+                <Button link={item.href} trueButton text={'see more'}></Button>
               </ProjectDescriptionContainerLeft>
 
               <ImageContainerRight>
@@ -105,7 +111,7 @@ const MainPageProjectsDesktop = () => {
                 <ProjectDescription>{item.description}</ProjectDescription>
                 <Marginer margin={26} />
 
-                <Button text={'see more'}></Button>
+                <Button link={item.href} trueButton text={'see more'}></Button>
               </ProjectDescriptionContainerRight>
 
               <Margin>

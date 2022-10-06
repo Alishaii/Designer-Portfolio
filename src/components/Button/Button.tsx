@@ -20,6 +20,7 @@ const ButtonContainer = styled.div`
   font-size: 14px;
   line-height: 120%;
   transition: all 0.3s ease;
+  display: inline;
 
   ${(props: ButtonContainerPropos) =>
     props.trueButton

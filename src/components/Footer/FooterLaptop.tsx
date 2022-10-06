@@ -19,7 +19,6 @@ const Cell = styled.div`
 const LinkedinAndEmail = styled.p``;
 
 const Phone = styled.p`
-  margin-left: auto;
 `;
 
 const ArrowUp = styled.div`
@@ -44,11 +43,11 @@ const FooterLaptop = () => {
         </Phone>
       </Cell>
       <Cell>
-        <Link href={'#header'}>
-          <ArrowUp>
+        <ArrowUp>
+          <Link href="#header">
             <Image src="/images/MainPage/arrow_up.svg" alt="" width={22} height={30} />
-          </ArrowUp>
-        </Link>
+          </Link>
+        </ArrowUp>
       </Cell>
     </>
   );

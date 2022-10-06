@@ -2,6 +2,7 @@ import React from 'react';
 import Device from '../../constants/device';
 import { useDeviceContext } from '../../context/device';
 import MainPageProjectsDesktop from './MainPageProjectsDesktop';
+import MainPageProjectsTablet from './MainPageProjectsTablet';
 
 const MainPageProjects = () => {
   const device = useDeviceContext();
@@ -14,13 +15,13 @@ const MainPageProjects = () => {
       return <MainPageProjectsDesktop />;
     }
     case Device.TABLET: {
-      return <MainPageProjectsDesktop />;
+      return <MainPageProjectsTablet />;
     }
     case Device.MOBILE: {
-      return <MainPageProjectsDesktop />;
+      return <MainPageProjectsTablet />;
     }
     default: {
-      return <MainPageProjectsDesktop />;
+      return <MainPageProjectsTablet />;
     }
   }
 };

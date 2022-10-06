@@ -92,6 +92,12 @@ const Home: NextPage = () => {
       </Margin>
 
       <Footer />
+      <Margin>
+        {(device === Device.DESKTOP && <Marginer margin={60} />) ||
+          (device === Device.LAPTOP && <Marginer margin={60} />) ||
+          (device === Device.TABLET && <Marginer margin={50} />) ||
+          (device === Device.MOBILE && <Marginer margin={34} />)}
+      </Margin>
     </HomeContainer>
   );
 };

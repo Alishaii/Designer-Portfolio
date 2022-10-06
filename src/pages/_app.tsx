@@ -4,10 +4,10 @@ import type { AppProps } from 'next/app';
 
 import styled, { createGlobalStyle } from 'styled-components';
 
-import Device from '../constants/device';
 import Header from '../components/Header';
-import DeviceWrapper, { useDeviceContext } from '../context/device';
+import DeviceWrapper from '../context/device';
 import NoSsrWrapper from '../components/NoSsrWrapper';
+import Marginer from '../components/Marginer';
 
 const CssReset = createGlobalStyle`
   *,
@@ -133,6 +133,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <HorizontalPadding>
             <Header />
             <Component {...pageProps} />
+
           </HorizontalPadding>
         </DeviceWrapper>
       </NoSsrWrapper>
