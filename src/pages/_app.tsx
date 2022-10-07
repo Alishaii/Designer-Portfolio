@@ -8,6 +8,7 @@ import Header from '../components/Header';
 import DeviceWrapper from '../context/device';
 import NoSsrWrapper from '../components/NoSsrWrapper';
 import Marginer from '../components/Marginer';
+import Footer from '../components/Footer';
 
 const CssReset = createGlobalStyle`
   *,
@@ -120,7 +121,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <Title>Portfolio</Title>
+        <Title>alina.llbarannikova</Title>
         <Meta name="description" content="Alina Barannykova Portfolio Website" />
         <Link rel="icon" href="/favicon.ico" />
       </Head>
@@ -133,7 +134,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <HorizontalPadding>
             <Header />
             <Component {...pageProps} />
-
+            <Footer />
           </HorizontalPadding>
         </DeviceWrapper>
       </NoSsrWrapper>

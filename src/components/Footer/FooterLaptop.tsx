@@ -19,6 +19,7 @@ const Cell = styled.div`
 const LinkedinAndEmail = styled.p``;
 
 const Phone = styled.p`
+  margin-left: auto;
 `;
 
 const ArrowUp = styled.div`
