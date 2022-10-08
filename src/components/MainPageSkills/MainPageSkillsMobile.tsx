@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import MainPageSectionTitle from '../MainPageSectionTitle';
 import Marginer from '../Marginer';
-import * as skillsConstants from '../../constants/skills';
+import * as skillsConstants from '../../constants/MainPage/skills';
 import Button from '../Button';
 
 const MainPageSkillsMobileContainer = styled.div`

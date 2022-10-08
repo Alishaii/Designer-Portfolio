@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { creativeAreas } from '../../constants/creativeAreas';
+import { creativeAreas } from '../../constants/MainPage/creativeAreas';
 import Device from '../../constants/device';
 import { useDeviceContext } from '../../context/device';
 import MainPageSectionTitle from '../MainPageSectionTitle';

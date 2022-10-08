@@ -7,7 +7,7 @@ import {
   personalQualitiesDescription,
   programs,
   programsDescription
-} from '../../constants/skills';
+} from '../../constants/MainPage/skills';
 import Button from '../Button';
 import MainPageSectionTitle from '../MainPageSectionTitle';
 import Marginer from '../Marginer';

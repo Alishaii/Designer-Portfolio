@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import MainPageSectionTitle from '../MainPageSectionTitle';
 
-import { projects } from '../../constants/projects';
+import { projects } from '../../constants/MainPage/projects';
 import Button from '../Button';
 import Marginer from '../Marginer';
 
