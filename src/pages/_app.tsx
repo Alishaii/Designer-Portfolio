@@ -7,7 +7,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Header from '../components/Header';
 import DeviceWrapper from '../context/device';
 import NoSsrWrapper from '../components/NoSsrWrapper';
-import Marginer from '../components/Marginer';
 import Footer from '../components/Footer';
 
 const CssReset = createGlobalStyle`

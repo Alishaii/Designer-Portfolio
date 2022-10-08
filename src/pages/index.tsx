@@ -8,7 +8,6 @@ import Marginer from '../components/Marginer';
 import MainPageDescription from '../components/MainPageDescription';
 import MainPageCreativeAreas from '../components/MainPageCreativeAreas';
 import MainPageSkills from '../components/MainPageSkills';
-import Footer from '../components/Footer';
 import MainPageProjects from '../components/MainPageProjects';
 
 interface DeviceProps {

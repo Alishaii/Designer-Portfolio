@@ -1,5 +1,8 @@
 import type { NextPage } from 'next';
 import styled from 'styled-components';
+import Marginer from '../../components/Marginer';
+import MinimalProjectDescription from '../../components/MinimalProjectDescription';
+import MinimalProjectImage from '../../components/MinimalProjectImage';
 import Device from '../../constants/device';
 import { useDeviceContext } from '../../context/device';
 
@@ -8,6 +11,7 @@ interface DeviceProps {
 }
 
 const MinimalPageContainer = styled.main`
+  position: relative;
   display: grid;
   grid-template-columns: ${(props: DeviceProps) => {
     switch (props.device) {
@@ -31,10 +35,20 @@ const Margin = styled.div`
   grid-column: 1 / span 3;
 `;
 
-const Home: NextPage = () => {
+const Minimal: NextPage = () => {
   const device = useDeviceContext();
 
-  return <MinimalPageContainer device={device}></MinimalPageContainer>;
+  return (
+    <MinimalPageContainer device={device}>
+      <MinimalProjectImage />
+
+      <MinimalProjectDescription />
+
+      <Margin>
+        <Marginer margin={1000}></Marginer>
+      </Margin>
+    </MinimalPageContainer>
+  );
 };
 
-export default Home;
+export default Minimal;
