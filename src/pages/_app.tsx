@@ -89,6 +89,8 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
+    max-width: 100%;
+
   }
 
   body {
