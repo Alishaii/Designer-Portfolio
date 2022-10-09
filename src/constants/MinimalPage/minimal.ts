@@ -16,7 +16,7 @@ export const description =
 export const problem = {
   description:
     'The task was set to solve business problems, which consist in the sale of already built apartments in an expensive residential complex.',
-  goals: 'Achieve sales of the majority of apartments in a residential complex within six months.',
+  goals: '– Achieve sales of the majority of apartments in a residential complex within six months.',
   tasks: '– Create a website based on the target audience'
 };
 

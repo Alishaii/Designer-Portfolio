@@ -11,11 +11,11 @@ const Margin = styled.div`
 `;
 
 const Title = styled.div`
-  padding-left: 80px;
+  grid-column: 1 / span 3;
 `;
 
 const BriefDescription = styled.p`
-  grid-column: span 2;
+  grid-column: 1 / span 3;
 
   font-weight: 300;
   font-size: 28px;
@@ -26,45 +26,25 @@ const BriefDescription = styled.p`
   white-space: pre-line;
 `;
 
-const AdditionalInfo = styled.div`
-  grid-column: 1 / span 3;
-  padding-left: 80px;
-`;
-
 const Description = styled.p`
   grid-column: 1 / span 3;
-
-  padding-right: 35%;
 
   font-weight: 300;
   font-size: 36px;
   line-height: 120%;
 
-  margin-top: 190px;
+  margin-top: calc(100vw - 850px);
 
-  @media only screen and (min-width: 1700px) {
-    margin-top: 240px;
+  @media only screen and (min-width: 1250px) {
+    margin-top: calc(100vw - 1000px);
   }
-
-  @media only screen and (min-width: 1800px) {
-    margin-top: 290px;
-  }
-`;
-
-const ProblemSolutionResearchGrid = styled.div`
-  grid-column: 1 / span 3;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 `;
 
 const Problem = styled.div`
   grid-row: span 2;
+  grid-column: span 2;
 
-  div {
-    padding-left: 60px;
-    padding-right: 10%;
-  }
+  padding-right: 8%;
 `;
 
 const ProblemTitle = styled.p`
@@ -77,8 +57,6 @@ const ProblemDescription = styled.p`
   font-weight: 300;
   font-size: 20px;
   line-height: 110%;
-
-  padding-right: 20%;
 `;
 
 const ProblemGoals = styled.div`
@@ -91,7 +69,9 @@ const ProblemGoals = styled.div`
 
 const ProblemGoalsTitle = styled.p``;
 
-const ProblemGoalsDescription = styled.p``;
+const ProblemGoalsDescription = styled.p`
+  padding-right: 2%;
+`;
 
 const ProblemTasks = styled.div`
   p {
@@ -103,7 +83,9 @@ const ProblemTasks = styled.div`
 
 const ProblemTasksTitle = styled.p``;
 
-const ProblemTasksDescription = styled.p``;
+const ProblemTasksDescription = styled.p`
+  padding-right: 2%;
+`;
 
 const Solution = styled.div``;
 
@@ -117,8 +99,6 @@ const SolutionDescription = styled.p`
   font-weight: 300;
   font-size: 20px;
   line-height: 110%;
-
-  padding-right: 20%;
 `;
 
 const Research = styled.div``;
@@ -133,11 +113,9 @@ const ResearchDescription = styled.p`
   font-weight: 300;
   font-size: 20px;
   line-height: 110%;
-
-  padding-right: 20%;
 `;
 
-const MinimalProjectDescriptionDesktop = () => {
+const MinimalProjectDescriptionLaptop = () => {
   return (
     <>
       <Margin>
@@ -147,58 +125,59 @@ const MinimalProjectDescriptionDesktop = () => {
       <Title>
         <ProjectTitle title={minimal.title} subtitle={minimal.subtitle}></ProjectTitle>
       </Title>
+      <Margin>
+        <Marginer margin={20} />
+      </Margin>
 
       <BriefDescription>{minimal.smallDescription}</BriefDescription>
       <Margin>
-        <Marginer margin={100} />
+        <Marginer margin={60} />
       </Margin>
 
-      <AdditionalInfo>
-        <MinimalProjectAdditionalInfo />
-      </AdditionalInfo>
+      <MinimalProjectAdditionalInfo />
 
       <Description>{minimal.description}</Description>
       <Margin>
         <Marginer margin={50} />
       </Margin>
 
-      <ProblemSolutionResearchGrid>
-        <Problem>
-          <ProblemTitle>Problem</ProblemTitle>
-          <Marginer margin={8} />
+      <Problem>
+        <ProblemTitle>Problem</ProblemTitle>
+        <Marginer margin={8} />
 
-          <ProblemDescription>{minimal.problem.description}</ProblemDescription>
-          <Marginer margin={30} />
+        <ProblemDescription>{minimal.problem.description}</ProblemDescription>
+        <Marginer margin={30} />
 
-          <ProblemGoals>
-            <ProblemGoalsTitle>Goals</ProblemGoalsTitle>
-            <Marginer margin={10} />
-            <ProblemGoalsDescription>{minimal.problem.goals}</ProblemGoalsDescription>
-          </ProblemGoals>
-          <Marginer margin={20} />
+        <ProblemGoals>
+          <ProblemGoalsTitle>Goals</ProblemGoalsTitle>
+          <Marginer margin={10} />
 
-          <ProblemTasks>
-            <ProblemTasksTitle>Tasks</ProblemTasksTitle>
-            <Marginer margin={10} />
-            <ProblemTasksDescription>{minimal.problem.tasks}</ProblemTasksDescription>
-          </ProblemTasks>
-        </Problem>
+          <ProblemGoalsDescription>{minimal.problem.goals}</ProblemGoalsDescription>
+        </ProblemGoals>
+        <Marginer margin={20} />
 
-        <Solution>
-          <SolutionTitle>Solution</SolutionTitle>
-          <Marginer margin={8} />
-          <SolutionDescription>{minimal.solution}</SolutionDescription>
-          <Marginer margin={50} />
-        </Solution>
+        <ProblemTasks>
+          <ProblemTasksTitle>Tasks</ProblemTasksTitle>
+          <Marginer margin={10} />
 
-        <Research>
-          <ResearchTitle>Research</ResearchTitle>
-          <Marginer margin={8} />
-          <ResearchDescription>{minimal.research}</ResearchDescription>
-        </Research>
-      </ProblemSolutionResearchGrid>
+          <ProblemTasksDescription>{minimal.problem.tasks}</ProblemTasksDescription>
+        </ProblemTasks>
+      </Problem>
+
+      <Solution>
+        <SolutionTitle>Solution</SolutionTitle>
+        <Marginer margin={8} />
+        <SolutionDescription>{minimal.solution}</SolutionDescription>
+        <Marginer margin={50} />
+      </Solution>
+
+      <Research>
+        <ResearchTitle>Research</ResearchTitle>
+        <Marginer margin={8} />
+        <ResearchDescription>{minimal.research}</ResearchDescription>
+      </Research>
     </>
   );
 };
 
-export default MinimalProjectDescriptionDesktop;
+export default MinimalProjectDescriptionLaptop;

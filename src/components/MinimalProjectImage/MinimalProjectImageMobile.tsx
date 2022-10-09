@@ -11,7 +11,7 @@ const MinimalProjectImageMobile = () => {
   return (
     <MinimalProjectImageMobileContainer>
       <NoHorizontalPadding>
-        <Image src={'/images/Minimal/main/mobile.png'} alt="" width={340} height={370} layout={'responsive'} />
+        <Image src={'/images/Minimal/main/mobile.jpg'} alt="" width={340} height={370} layout={'responsive'} />
       </NoHorizontalPadding>
     </MinimalProjectImageMobileContainer>
   );

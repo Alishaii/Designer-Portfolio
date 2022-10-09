@@ -6,6 +6,8 @@ import MinimalProjectImage from '../../components/MinimalProjectImage';
 import Device from '../../constants/device';
 import { useDeviceContext } from '../../context/device';
 
+import Image from 'next/image';
+
 interface DeviceProps {
   device: Device | undefined;
 }
@@ -19,7 +21,7 @@ const MinimalPageContainer = styled.main`
         return '28fr 34fr 38fr';
       }
       case Device.LAPTOP: {
-        return '40fr 28fr 32fr';
+        return '40fr 13fr 47fr';
       }
       case Device.TABLET || Device.MOBILE: {
         return '31fr 24fr 45fr';
@@ -35,6 +37,10 @@ const Margin = styled.div`
   grid-column: 1 / span 3;
 `;
 
+const Images = styled.div`
+  grid-column: 1 / span 3;
+`;
+
 const Minimal: NextPage = () => {
   const device = useDeviceContext();
 
@@ -44,8 +50,18 @@ const Minimal: NextPage = () => {
 
       <MinimalProjectDescription />
 
+      {(device === Device.DESKTOP && <Marginer margin={80} />) ||
+        (device === Device.LAPTOP && <Marginer margin={60} />) ||
+        (device === Device.TABLET && <Marginer margin={60} />) ||
+        (device === Device.MOBILE && <Marginer margin={50} />)}
+
+      
+
       <Margin>
-        <Marginer margin={1000}></Marginer>
+        {(device === Device.DESKTOP && <Marginer margin={140} />) ||
+          (device === Device.LAPTOP && <Marginer margin={140} />) ||
+          (device === Device.TABLET && <Marginer margin={120} />) ||
+          (device === Device.MOBILE && <Marginer margin={80} />)}
       </Margin>
     </MinimalPageContainer>
   );

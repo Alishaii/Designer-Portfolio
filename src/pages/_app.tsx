@@ -97,6 +97,7 @@ const GlobalStyles = createGlobalStyle`
 
     font-family: Plain Light;
     color: black;
+    overflow-x: hidden;
   }
 `;
 

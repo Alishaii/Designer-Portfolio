@@ -11,7 +11,7 @@ const MinimalProjectImageTablet = () => {
   return (
     <MinimalProjectImageTabletContainer>
       <NoHorizontalPadding>
-        <Image src={'/images/Minimal/main/tablet.png'} alt="" width={640} height={530} layout={'responsive'} />
+        <Image src={'/images/Minimal/main/tablet.jpg'} alt="" width={640} height={530} layout={'responsive'} />
       </NoHorizontalPadding>
     </MinimalProjectImageTabletContainer>
   );

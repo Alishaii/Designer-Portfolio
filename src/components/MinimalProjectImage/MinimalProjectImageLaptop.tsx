@@ -12,7 +12,7 @@ const MinimalProjectImageLaptopContainer = styled.div`
 const MinimalProjectImageLaptop = () => {
   return (
     <MinimalProjectImageLaptopContainer>
-      <Image src={'/images/Minimal/main/laptop.png'} alt="" width={1000} height={580} layout={'responsive'} />
+      <Image src={'/images/Minimal/main/laptop.jpg'} alt="" width={1000} height={580} layout={'responsive'} />
     </MinimalProjectImageLaptopContainer>
   );
 };

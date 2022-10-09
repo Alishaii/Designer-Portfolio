@@ -20,7 +20,9 @@ const ItemTitle = styled.p`
 
 const InnerItems = styled.div``;
 
-const InnerItem = styled.p``;
+const InnerItem = styled.p`
+  line-height: 100%;
+`;
 
 const MinimalProjectAdditionalInfo = () => {
   return (

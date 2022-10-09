@@ -1,8 +1,10 @@
 import React from 'react';
 import Device from '../../constants/device';
 import { useDeviceContext } from '../../context/device';
-import styled from 'styled-components';
 import MinimalProjectDescriptionDesktop from './MinimalProjectDescriptionDesktop';
+import MinimalProjectDescriptionLaptop from './MinimalProjectDescriptionLaptop';
+import MinimalProjectDescriptionMobile from './MinimalProjectDescriptionMobile';
+import MinimalProjectDescriptionTablet from './MinimalProjectDescriptionTablet';
 
 const MinimalProjectDescription = () => {
   const device = useDeviceContext();
@@ -12,16 +14,16 @@ const MinimalProjectDescription = () => {
       return <MinimalProjectDescriptionDesktop />;
     }
     case Device.LAPTOP: {
-      return <MinimalProjectDescriptionDesktop />;
+      return <MinimalProjectDescriptionLaptop />;
     }
-    // case Device.TABLET: {
-    //   return <MinimalProjectDescriptionTablet />;
-    // }
-    // case Device.MOBILE: {
-    //   return <MinimalProjectDescriptionTablet />;
-    // }
+    case Device.TABLET: {
+      return <MinimalProjectDescriptionTablet />;
+    }
+    case Device.MOBILE: {
+      return <MinimalProjectDescriptionMobile />;
+    }
     default: {
-      return <MinimalProjectDescriptionDesktop />;
+      return <MinimalProjectDescriptionMobile />;
     }
   }
 };
