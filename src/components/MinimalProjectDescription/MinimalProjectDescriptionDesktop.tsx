@@ -34,8 +34,6 @@ const AdditionalInfo = styled.div`
 const Description = styled.p`
   grid-column: 1 / span 3;
 
-  padding-right: 35%;
-
   font-weight: 300;
   font-size: 36px;
   line-height: 120%;

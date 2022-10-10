@@ -11,7 +11,7 @@ export const projectAdditionalInfo = [
 ];
 
 export const description =
-  'Website for the presentation and sale of products with own production website for the presentation and sale of products with own production';
+  'The Minimal company has qualified teams of employees, great business connections, and they needed a website to communicate with customers and provide them with services in the form of selling ready-made apartments.';
 
 export const problem = {
   description:
