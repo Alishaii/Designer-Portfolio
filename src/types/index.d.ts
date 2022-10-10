@@ -1,4 +1,4 @@
-export default interface ProjectDescription {
+export default interface ProjectDescriptionContent {
   title: string;
   subtitle: string;
   smallDescription: string;

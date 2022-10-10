@@ -3,18 +3,19 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import { ProjectMainImageProps } from './ProjectMainImage';
 
-const ProjectMainImageLaptopContainer = styled.div`
+const ProjectImageLaptopContainer = styled.div`
   position: absolute;
-  width: 100%;
+  width: 100vw;
+  transform: translateX(-6.25%);
   z-index: -1;
 `;
 
-const ProjectMainImageLaptop: React.FC<ProjectMainImageProps> = ({ projectName }) => {
+const ProjectImageLaptop: React.FC<ProjectMainImageProps> = ({ projectName }) => {
   return (
-    <ProjectMainImageLaptopContainer>
-      <Image src={`/images/${projectName}/main/desktop.jpg`} alt="" width={1400} height={580} layout={'responsive'} />
-    </ProjectMainImageLaptopContainer>
+    <ProjectImageLaptopContainer>
+      <Image src={`/images/${projectName}/main/laptop.jpg`} alt="" width={1000} height={580} layout={'responsive'} />
+    </ProjectImageLaptopContainer>
   );
 };
 
-export default ProjectMainImageLaptop;
+export default ProjectImageLaptop;

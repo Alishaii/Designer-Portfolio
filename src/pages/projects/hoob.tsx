@@ -1,9 +1,12 @@
 import { NextPage } from 'next';
 import React from 'react';
 import styled from 'styled-components';
+import ProjectDescription from '../../components/ProjectDescription';
 import ProjectMainImage from '../../components/ProjectMainImage';
 import Device from '../../constants/device';
 import { useDeviceContext } from '../../context/device';
+import { hoob } from '../../constants/HoobPage/hoob';
+import Marginer from '../../components/Marginer';
 
 interface DeviceProps {
   device: Device | undefined;
@@ -40,6 +43,14 @@ const Hoob: NextPage = () => {
   return (
     <HoobPageContainer device={device}>
       <ProjectMainImage projectName={'Hoob'} />
+
+      <ProjectDescription projectDescription={hoob} />
+      <Margin>
+        {(device === Device.DESKTOP && <Marginer margin={80} />) ||
+          (device === Device.LAPTOP && <Marginer margin={60} />) ||
+          (device === Device.TABLET && <Marginer margin={60} />) ||
+          (device === Device.MOBILE && <Marginer margin={50} />)}
+      </Margin>
     </HoobPageContainer>
   );
 };

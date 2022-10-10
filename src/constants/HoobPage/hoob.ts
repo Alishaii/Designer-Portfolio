@@ -1,6 +1,6 @@
-import ProjectDescription from '../../types';
+import ProjectDescriptionContent from '../../types';
 
-export const hoob: ProjectDescription = {
+export const hoob: ProjectDescriptionContent = {
   title: 'HOOB',
   subtitle: 'Landing Page',
   smallDescription: 'Website for the presentation and sale of products with own production',
