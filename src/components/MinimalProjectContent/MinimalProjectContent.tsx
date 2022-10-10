@@ -3,6 +3,8 @@ import Device from '../../constants/device';
 import { useDeviceContext } from '../../context/device';
 import MinimalProjectContentDesktop from './MinimalProjectContentDesktop';
 import MinimalProjectContentLaptop from './MinimalProjectContentLaptop';
+import MinimalProjectContentTablet from './MinimalProjectContentTablet';
+import MinimalProjectContentMobile from './MinimalProjectMobile';
 
 const MinimalProjectContent = () => {
   const device = useDeviceContext();
@@ -14,13 +16,13 @@ const MinimalProjectContent = () => {
       return <MinimalProjectContentLaptop />;
     }
     case Device.TABLET: {
-      return <MinimalProjectContentDesktop />;
+      return <MinimalProjectContentTablet />;
     }
     case Device.MOBILE: {
-      return <MinimalProjectContentDesktop />;
+      return <MinimalProjectContentMobile />;
     }
     default: {
-      return <MinimalProjectContentDesktop />;
+      return <MinimalProjectContentMobile />;
     }
   }
 };
