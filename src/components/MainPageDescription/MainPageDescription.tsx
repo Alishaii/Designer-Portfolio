@@ -100,7 +100,11 @@ const Interior = (
         <Button trueButton link="https://www.linkedin.com/in/alinallbarannikova/" text={'Linkedin'} />
         <Button trueButton link="https://t.me/alina_llbarannikova" text={'Telegram'} />
         <Resume>
-          <Button trueButton text={'Resume'} />
+          <Button
+            trueButton
+            link="https://drive.google.com/uc?export=download&id=1MrVm1Jn2eL-IEYrvbv5RfpHjJcTjbOJE"
+            text={'Resume'}
+          />
           <PDF>.pdf</PDF>
         </Resume>
       </SocialMedia>
