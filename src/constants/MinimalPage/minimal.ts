@@ -14,12 +14,12 @@ export const minimal: ProjectDescriptionContent = {
     'The Minimal company has qualified teams of employees, great business connections, and they needed a website to communicate with customers and provide them with services in the form of selling ready-made apartments.',
   problem: {
     description:
-      'The task was set to solve business problems, which consist in the sale of already built apartments in an expensive residential complex.',
-    goals: '– Achieve sales of the majority of apartments in a residential complex within six months.',
-    tasks: '– Create a website based on the target audience'
+      'At the beginning, we have built complexes of buildings with apartments that require timely sale to future owners.',
+    goals: 'Achieve sales of the majority of apartments in a residential complex within twelve months.',
+    tasks: 'Create a website based on the competitive analysis below.'
   },
   solution:
-    'It is necessary to provide an overview of brief information and high-quality photos, the main characteristics and the ability to select different options on the site.',
+    'Conduct research and make a mock-up from the data obtained. Provide an overview brief information and high-quality photos, main characteristics and the ability to choose different options on the site.',
   research:
-    'In the course of my research, the target audience of this product was determined. I was also able to make a list in which all the necessary data from the point of view of the consumer himself, which will need to be placed on the site, were written out.'
+    'In the course of my research, the target audience of this product was determined. I was also able to make a list in which all the necessary data from the point of view of the consumer himself, which will need to be placed on the site, were written out.'
 };
