@@ -7,6 +7,7 @@ import Device from '../../constants/device';
 import { useDeviceContext } from '../../context/device';
 import { hoob } from '../../constants/HoobPage/hoob';
 import Marginer from '../../components/Marginer';
+import HoobProjectContent from '../../components/HoobProjectContent';
 
 interface DeviceProps {
   device: Device | undefined;
@@ -51,6 +52,8 @@ const Hoob: NextPage = () => {
           (device === Device.TABLET && <Marginer margin={60} />) ||
           (device === Device.MOBILE && <Marginer margin={50} />)}
       </Margin>
+
+      <HoobProjectContent />
     </HoobPageContainer>
   );
 };

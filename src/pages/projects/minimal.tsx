@@ -2,10 +2,11 @@ import type { NextPage } from 'next';
 import styled from 'styled-components';
 import Marginer from '../../components/Marginer';
 import MinimalProjectContent from '../../components/MinimalProjectContent';
-import MinimalProjectDescription from '../../components/MinimalProjectDescription';
-import MinimalProjectImage from '../../components/MinimalProjectImage';
+import ProjectDescription from '../../components/ProjectDescription';
 import Device from '../../constants/device';
 import { useDeviceContext } from '../../context/device';
+import { minimal } from '../../constants/MinimalPage/minimal';
+import ProjectMainImage from '../../components/ProjectMainImage';
 
 interface DeviceProps {
   device: Device | undefined;
@@ -41,9 +42,9 @@ const Minimal: NextPage = () => {
 
   return (
     <MinimalPageContainer device={device}>
-      <MinimalProjectImage />
+      <ProjectMainImage projectName={'Minimal'} />
 
-      <MinimalProjectDescription />
+      <ProjectDescription projectDescription={minimal} />
       <Margin>
         {(device === Device.DESKTOP && <Marginer margin={80} />) ||
           (device === Device.LAPTOP && <Marginer margin={60} />) ||
