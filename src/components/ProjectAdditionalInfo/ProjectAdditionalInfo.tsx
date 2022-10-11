@@ -18,7 +18,11 @@ const ItemTitle = styled.p`
   line-height: 110%;
 `;
 
-const InnerItems = styled.div``;
+const InnerItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
 
 const InnerItem = styled.p`
   line-height: 100%;
