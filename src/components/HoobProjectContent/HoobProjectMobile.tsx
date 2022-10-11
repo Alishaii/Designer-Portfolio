@@ -3,36 +3,29 @@ import styled from 'styled-components';
 import NoHorizontalPadding from '../NoHorizontalPadding';
 import Image from 'next/image';
 
-const MinimalProjectContentMobileContainer = styled.div`
+const HoobProjectContentMobileContainer = styled.div`
   grid-column: 1 / span 3;
 `;
 
-const MinimalProjectContentMobile = () => {
+const HoobProjectContentMobile = () => {
   return (
-    <MinimalProjectContentMobileContainer>
+    <HoobProjectContentMobileContainer>
       <NoHorizontalPadding>
         <Image
-          src={'/images/Minimal/content/mobile/1.jpg'}
+          src={'/images/Hoob/content/mobile/1.jpg'}
           priority
           alt=""
           width={340}
-          height={1843}
+          height={3014}
           layout={'responsive'}
         />
       </NoHorizontalPadding>
 
-      <Image
-        src={'/images/Minimal/content/mobile/2.jpg'}
-        priority
-        alt=""
-        width={320}
-        height={334}
-        layout={'responsive'}
-      />
+      <Image src={'/images/Hoob/content/mobile/2.jpg'} priority alt="" width={320} height={334} layout={'responsive'} />
 
       <NoHorizontalPadding>
         <Image
-          src={'/images/Minimal/content/mobile/3.jpg'}
+          src={'/images/Hoob/content/mobile/3.jpg'}
           priority
           alt=""
           width={340}
@@ -43,7 +36,7 @@ const MinimalProjectContentMobile = () => {
 
       <NoHorizontalPadding>
         <Image
-          src={'/images/Minimal/content/mobile/4.jpg'}
+          src={'/images/Hoob/content/mobile/4.jpg'}
           priority
           alt=""
           width={340}
@@ -52,29 +45,31 @@ const MinimalProjectContentMobile = () => {
         />
       </NoHorizontalPadding>
 
+      <Image src={'/images/Hoob/content/mobile/5.jpg'} priority alt="" width={320} height={758} layout={'responsive'} />
+
+      <NoHorizontalPadding>
+        <Image
+          src={'/images/Hoob/content/mobile/6.jpg'}
+          priority
+          alt=""
+          width={340}
+          height={520}
+          layout={'responsive'}
+        />
+      </NoHorizontalPadding>
+
       <Image
-        src={'/images/Minimal/content/mobile/5.jpg'}
+        src={'/images/Hoob/content/mobile/7.jpg'}
         priority
         alt=""
         width={320}
-        height={913}
+        height={1229}
         layout={'responsive'}
       />
 
       <NoHorizontalPadding>
         <Image
-          src={'/images/Minimal/content/mobile/6.jpg'}
-          priority
-          alt=""
-          width={340}
-          height={580}
-          layout={'responsive'}
-        />
-      </NoHorizontalPadding>
-
-      <NoHorizontalPadding>
-        <Image
-          src={'/images/Minimal/content/mobile/7.jpg'}
+          src={'/images/Hoob/content/mobile/8.jpg'}
           priority
           alt=""
           width={340}
@@ -82,30 +77,8 @@ const MinimalProjectContentMobile = () => {
           layout={'responsive'}
         />
       </NoHorizontalPadding>
-
-      <NoHorizontalPadding>
-        <Image
-          src={'/images/Minimal/content/mobile/8.jpg'}
-          priority
-          alt=""
-          width={340}
-          height={590}
-          layout={'responsive'}
-        />
-      </NoHorizontalPadding>
-
-      <NoHorizontalPadding>
-        <Image
-          src={'/images/Minimal/content/mobile/9.jpg'}
-          priority
-          alt=""
-          width={340}
-          height={520}
-          layout={'responsive'}
-        />
-      </NoHorizontalPadding>
-    </MinimalProjectContentMobileContainer>
+    </HoobProjectContentMobileContainer>
   );
 };
 
-export default MinimalProjectContentMobile;
+export default HoobProjectContentMobile;
