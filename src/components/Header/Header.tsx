@@ -52,7 +52,7 @@ const Header = () => {
       </HeaderButtonContainer>
 
       <HeaderButtonContainer>
-        <Button trueButton link="#projects" text={'projects'} />
+        <Button trueButton link="/#projects" text={'projects'} />
       </HeaderButtonContainer>
 
       <HeaderButtonContainer>
