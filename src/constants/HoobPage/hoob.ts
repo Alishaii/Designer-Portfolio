@@ -14,8 +14,15 @@ export const hoob: ProjectDescriptionContent = {
     'Hoob company created not just an ordinary hookah manufacturer. We are a team of creative designers, professional engineers, marketers, and, of course, hookah masters. The minimalistic design and strict forms chosen to emphasize the exclusivity of Hoob.',
   problem: {
     description: 'Outdated and inconvenient site to use. As well as small sales among average site users.',
-    goals: 'To study in more detail the scope of the hookah business and the needs of users.',
-    tasks: 'Create product pages, catalog and home page based on your target audience.'
+    goals: [
+      'To study in more detail the scope of the hookah business and the needs of users.',
+      'Increase sales targeting the middle class.'
+    ],
+    tasks: [
+      'Competitive Analysis.',
+      'Deepening into the current topic.',
+      'Create product pages, catalog and home page based on your target audience.'
+    ]
   },
   solution:
     'Updating the site design primarily from the ux side, thereby fulfilling the task of increasing sales. As well as changing the external component of the site, to attract more users.',

@@ -6,8 +6,8 @@ export default interface ProjectDescriptionContent {
   description: string;
   problem: {
     description: string;
-    goals: string;
-    tasks: string;
+    goals: Array<string>;
+    tasks: Array<string>;
   };
   solution: string;
   research: string;

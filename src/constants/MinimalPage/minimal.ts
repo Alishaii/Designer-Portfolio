@@ -15,8 +15,12 @@ export const minimal: ProjectDescriptionContent = {
   problem: {
     description:
       'At the beginning, we have built complexes of buildings with apartments that require timely sale to future owners.',
-    goals: 'Achieve sales of the majority of apartments in a residential complex within twelve months.',
-    tasks: 'Create a website based on the competitive analysis below.'
+    goals: ['Achieve sales of the majority of apartments in a residential complex within twelve months.'],
+    tasks: [
+      'Competitive Analysis.',
+      'Deepening into the current topic.',
+      'Create a website based on the competitive analysis.'
+    ]
   },
   solution:
     'Conduct research and make a mock-up from the data obtained. Provide an overview brief information and high-quality photos, main characteristics and the ability to choose different options on the site.',

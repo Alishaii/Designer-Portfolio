@@ -59,7 +59,7 @@ const ProblemSolutionResearchGrid = styled.div`
 const Problem = styled.div`
   grid-row: span 2;
 
-  div {
+  & > div {
     padding-left: 60px;
     padding-right: 10%;
   }
@@ -89,7 +89,21 @@ const ProblemGoals = styled.div`
 
 const ProblemGoalsTitle = styled.p``;
 
-const ProblemGoalsDescription = styled.p``;
+const ProblemGoalsDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ProblemGoalsDescriptionItem = styled.div`
+  display: flex;
+  align-items: flex-start;
+`;
+
+const ProblemGoalsDescriptionItemText = styled.p``;
+
+const ProblemGoalsDescriptionItemDot = styled.p`
+  margin: 0 10px;
+`;
 
 const ProblemTasks = styled.div`
   p {
@@ -101,7 +115,21 @@ const ProblemTasks = styled.div`
 
 const ProblemTasksTitle = styled.p``;
 
-const ProblemTasksDescription = styled.p``;
+const ProblemTasksDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ProblemTaskDescriptionItem = styled.div`
+  display: flex;
+  align-items: flex-start;
+`;
+
+const ProblemTaskDescriptionItemText = styled.p``;
+
+const ProblemTaskDescriptionItemDot = styled.p`
+  margin: 0 10px;
+`;
 
 const Solution = styled.div``;
 
@@ -171,14 +199,28 @@ const ProjectDescriptionDesktop: React.FC<ProjectDescriptionProps> = ({ projectD
           <ProblemGoals>
             <ProblemGoalsTitle>Goals</ProblemGoalsTitle>
             <Marginer margin={10} />
-            <ProblemGoalsDescription>{projectDescription.problem.goals}</ProblemGoalsDescription>
+            <ProblemGoalsDescription>
+              {projectDescription.problem.goals.map((item, index) => (
+                <ProblemGoalsDescriptionItem key={index}>
+                  <ProblemGoalsDescriptionItemDot>•</ProblemGoalsDescriptionItemDot>
+                  <ProblemGoalsDescriptionItemText>{item}</ProblemGoalsDescriptionItemText>
+                </ProblemGoalsDescriptionItem>
+              ))}
+            </ProblemGoalsDescription>
           </ProblemGoals>
           <Marginer margin={20} />
 
           <ProblemTasks>
             <ProblemTasksTitle>Tasks</ProblemTasksTitle>
             <Marginer margin={10} />
-            <ProblemTasksDescription>{projectDescription.problem.tasks}</ProblemTasksDescription>
+            <ProblemTasksDescription>
+              {projectDescription.problem.tasks.map((item, index) => (
+                <ProblemTaskDescriptionItem key={index}>
+                  <ProblemTaskDescriptionItemDot>•</ProblemTaskDescriptionItemDot>
+                  <ProblemTaskDescriptionItemText>{item}</ProblemTaskDescriptionItemText>
+                </ProblemTaskDescriptionItem>
+              ))}
+            </ProblemTasksDescription>
           </ProblemTasks>
         </Problem>
 
