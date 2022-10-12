@@ -1,8 +1,11 @@
 import React from 'react';
-import Device from '../../constants/device';
-import { useDeviceContext } from '../../context/device';
+
 import MainPageProjectsDesktop from './MainPageProjectsDesktop';
 import MainPageProjectsTablet from './MainPageProjectsTablet';
+
+import Device from '../../constants/device';
+
+import { useDeviceContext } from '../../context/device';
 
 const MainPageProjects = () => {
   const device = useDeviceContext();

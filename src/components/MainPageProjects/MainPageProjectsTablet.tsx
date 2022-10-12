@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
+
+import Button from '../Button';
+import Marginer from '../Marginer';
+import Link from '../Link';
 import MainPageSectionTitle from '../MainPageSectionTitle';
 
 import { projects } from '../../constants/MainPage/projects';
-import Button from '../Button';
-import Marginer from '../Marginer';
 
 const MainPageProjectsTabletContainer = styled.div`
   grid-column: 1 / span 3;
@@ -62,14 +64,16 @@ const MainPageProjectsTablet = () => {
         {projects.map((item, index) => (
           <ProjectItem key={index}>
             <ImageContainer>
-              <Image
-                layout="responsive"
-                src={item.img}
-                alt=""
-                width={item.imgWidth}
-                height={item.imgHeight}
-                placeholder="blur"
-              />
+              <Link href={item.href}>
+                <Image
+                  layout="responsive"
+                  src={item.img}
+                  alt=""
+                  width={item.imgWidth}
+                  height={item.imgHeight}
+                  placeholder={'blur'}
+                />
+              </Link>
             </ImageContainer>
             <Marginer margin={40} />
 

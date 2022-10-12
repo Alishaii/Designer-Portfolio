@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
+
+import Button from '../Button';
+import Marginer from '../Marginer';
+import Link from '../Link';
 import MainPageSectionTitle from '../MainPageSectionTitle';
 
 import { projects } from '../../constants/MainPage/projects';
-import Button from '../Button';
-import Marginer from '../Marginer';
 
 const MainPageProjectsDesktopContainer = styled.div`
   grid-column: 1 / span 3;
@@ -90,9 +92,17 @@ const MainPageProjectsDesktop = () => {
                 <Button link={item.href} trueButton text={'see more'}></Button>
               </ProjectDescriptionContainerLeft>
 
-              <ImageContainerRight>
-                <Image src={item.img} alt="" width={item.imgWidth} height={item.imgHeight} placeholder="blur"></Image>
-              </ImageContainerRight>
+              <Link href={item.href}>
+                <ImageContainerRight>
+                  <Image
+                    src={item.img}
+                    alt=""
+                    width={item.imgWidth}
+                    height={item.imgHeight}
+                    placeholder={'blur'}
+                  ></Image>
+                </ImageContainerRight>
+              </Link>
 
               <Margin>
                 <Marginer margin={60} />
@@ -100,9 +110,17 @@ const MainPageProjectsDesktop = () => {
             </React.Fragment>
           ) : (
             <React.Fragment key={index}>
-              <ImageContainerLeft>
-                <Image src={item.img} alt="" width={item.imgWidth} height={item.imgHeight}></Image>
-              </ImageContainerLeft>
+              <Link href={item.href}>
+                <ImageContainerLeft>
+                  <Image
+                    src={item.img}
+                    alt=""
+                    width={item.imgWidth}
+                    height={item.imgHeight}
+                    placeholder={'blur'}
+                  ></Image>
+                </ImageContainerLeft>
+              </Link>
 
               <ProjectDescriptionContainerRight>
                 <ProjectName>{item.name}</ProjectName>
