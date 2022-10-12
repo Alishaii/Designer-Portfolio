@@ -1,13 +1,20 @@
-import { NextPage } from 'next';
 import React from 'react';
+import { NextPage } from 'next';
 import styled from 'styled-components';
+
 import ProjectDescription from '../../components/ProjectDescription';
 import ProjectMainImage from '../../components/ProjectMainImage';
 import Device from '../../constants/device';
-import { useDeviceContext } from '../../context/device';
-import { hoob } from '../../constants/HoobPage/hoob';
 import Marginer from '../../components/Marginer';
 import HoobProjectContent from '../../components/HoobProjectContent';
+
+import { useDeviceContext } from '../../context/device';
+
+import { hoob } from '../../constants/HoobPage/hoob';
+import desktopImg from '../../../public/images/Hoob/main/desktop.jpg';
+import laptopImg from '../../../public/images/Hoob/main/laptop.jpg';
+import tabletImg from '../../../public/images/Hoob/main/tablet.jpg';
+import mobileImg from '../../../public/images/Hoob/main/mobile.jpg';
 
 interface DeviceProps {
   device: Device | undefined;
@@ -43,7 +50,7 @@ const Hoob: NextPage = () => {
 
   return (
     <HoobPageContainer device={device}>
-      <ProjectMainImage projectName={'Hoob'} />
+      <ProjectMainImage desktopImg={desktopImg} laptopImg={laptopImg} tabletImg={tabletImg} mobileImg={mobileImg} />
 
       <ProjectDescription projectDescription={hoob} />
       <Margin>

@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
-import { ProjectMainImageProps } from './ProjectMainImage';
+import Image, { StaticImageData } from 'next/image';
+
+interface ProjectMainImageDesktopProps {
+  image: StaticImageData;
+}
 
 const HoobProjectImageDesktopContainer = styled.div`
   position: absolute;
@@ -9,10 +12,10 @@ const HoobProjectImageDesktopContainer = styled.div`
   z-index: -1;
 `;
 
-const ProjectMainImageDesktop: React.FC<ProjectMainImageProps> = ({ projectName }) => {
+const ProjectMainImageDesktop: React.FC<ProjectMainImageDesktopProps> = ({ image }) => {
   return (
     <HoobProjectImageDesktopContainer>
-      <Image src={`/images/${projectName}/main/desktop.jpg`} alt="" width={1400} height={580} layout={'responsive'} />
+      <Image src={image} alt="" width={1400} height={580} layout={'responsive'} placeholder='blur' />
     </HoobProjectImageDesktopContainer>
   );
 };

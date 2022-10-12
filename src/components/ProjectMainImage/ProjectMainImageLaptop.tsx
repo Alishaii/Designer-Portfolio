@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
-import { ProjectMainImageProps } from './ProjectMainImage';
+import Image, { StaticImageData } from 'next/image';
+
+interface ProjectMainImageLaptopProps {
+  image: StaticImageData;
+}
 
 const ProjectImageLaptopContainer = styled.div`
   position: absolute;
@@ -10,10 +13,10 @@ const ProjectImageLaptopContainer = styled.div`
   z-index: -1;
 `;
 
-const ProjectImageLaptop: React.FC<ProjectMainImageProps> = ({ projectName }) => {
+const ProjectImageLaptop: React.FC<ProjectMainImageLaptopProps> = ({ image }) => {
   return (
     <ProjectImageLaptopContainer>
-      <Image src={`/images/${projectName}/main/laptop.jpg`} alt="" width={1000} height={580} layout={'responsive'} />
+      <Image src={image} alt="" width={1000} height={580} layout={'responsive'} placeholder="blur" />
     </ProjectImageLaptopContainer>
   );
 };

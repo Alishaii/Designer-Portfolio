@@ -1,12 +1,20 @@
+import React from 'react';
 import type { NextPage } from 'next';
 import styled from 'styled-components';
+
 import Marginer from '../../components/Marginer';
 import MinimalProjectContent from '../../components/MinimalProjectContent';
 import ProjectDescription from '../../components/ProjectDescription';
 import Device from '../../constants/device';
-import { useDeviceContext } from '../../context/device';
-import { minimal } from '../../constants/MinimalPage/minimal';
 import ProjectMainImage from '../../components/ProjectMainImage';
+
+import { useDeviceContext } from '../../context/device';
+
+import { minimal } from '../../constants/MinimalPage/minimal';
+import desktopImg from '../../../public/images/Minimal/main/desktop.jpg';
+import laptopImg from '../../../public/images/Minimal/main/laptop.jpg';
+import tabletImg from '../../../public/images/Minimal/main/tablet.jpg';
+import mobileImg from '../../../public/images/Minimal/main/mobile.jpg';
 
 interface DeviceProps {
   device: Device | undefined;
@@ -42,7 +50,7 @@ const Minimal: NextPage = () => {
 
   return (
     <MinimalPageContainer device={device}>
-      <ProjectMainImage projectName={'Minimal'} />
+      <ProjectMainImage desktopImg={desktopImg} laptopImg={laptopImg} tabletImg={tabletImg} mobileImg={mobileImg} />
 
       <ProjectDescription projectDescription={minimal} />
       <Margin>
