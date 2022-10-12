@@ -92,8 +92,8 @@ const MainPageProjectsDesktop = () => {
                 <Button link={item.href} trueButton text={'see more'}></Button>
               </ProjectDescriptionContainerLeft>
 
-              <Link href={item.href}>
-                <ImageContainerRight>
+              <ImageContainerRight>
+                <Link href={item.href}>
                   <Image
                     src={item.img}
                     alt=""
@@ -101,8 +101,8 @@ const MainPageProjectsDesktop = () => {
                     height={item.imgHeight}
                     placeholder={'blur'}
                   ></Image>
-                </ImageContainerRight>
-              </Link>
+                </Link>
+              </ImageContainerRight>
 
               <Margin>
                 <Marginer margin={60} />
@@ -110,8 +110,8 @@ const MainPageProjectsDesktop = () => {
             </React.Fragment>
           ) : (
             <React.Fragment key={index}>
-              <Link href={item.href}>
-                <ImageContainerLeft>
+              <ImageContainerLeft>
+                <Link href={item.href}>
                   <Image
                     src={item.img}
                     alt=""
@@ -119,8 +119,8 @@ const MainPageProjectsDesktop = () => {
                     height={item.imgHeight}
                     placeholder={'blur'}
                   ></Image>
-                </ImageContainerLeft>
-              </Link>
+                </Link>
+              </ImageContainerLeft>
 
               <ProjectDescriptionContainerRight>
                 <ProjectName>{item.name}</ProjectName>

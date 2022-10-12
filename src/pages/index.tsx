@@ -9,6 +9,7 @@ import MainPageDescription from '../components/MainPageDescription';
 import MainPageCreativeAreas from '../components/MainPageCreativeAreas';
 import MainPageSkills from '../components/MainPageSkills';
 import MainPageProjects from '../components/MainPageProjects';
+import { useEffect } from 'react';
 
 interface DeviceProps {
   device: Device | undefined;
@@ -40,6 +41,12 @@ const Margin = styled.div`
 
 const Home: NextPage = () => {
   const device = useDeviceContext();
+
+  useEffect(() => {
+    if (window.location.href.endsWith('#projects')) {
+      document.getElementById('projects')?.scrollIntoView();
+    }
+  }, []);
 
   return (
     <HomeContainer device={device}>

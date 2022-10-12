@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
+
 import Marginer from '../Marginer';
 import Link from '../Link';
 
 const FooterMobileContainer = styled.div`
   grid-column: span 3;
-  border-top: 1px solid black;
 `;
 
 const LinkedinAndEmail = styled.p``;

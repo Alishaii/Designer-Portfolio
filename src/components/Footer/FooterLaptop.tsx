@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
+
 import Link from '../Link';
 
 const Cell = styled.div`
   min-height: 180px;
-  border-top: 1px solid black;
 
   font-weight: 300;
   font-size: 20px;

@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
-
-import styled, { createGlobalStyle } from 'styled-components';
 
 import Header from '../components/Header';
 import DeviceWrapper from '../context/device';
@@ -120,6 +119,12 @@ const HorizontalPadding = styled.div`
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [showFooterTopBorder, setShowFooterTopBorder] = useState(false);
+
+  useEffect(() => {
+    setShowFooterTopBorder(!window.location.href.includes('/projects/'));
+  }, []);
+
   return (
     <>
       <Head>
@@ -136,7 +141,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <HorizontalPadding>
             <Header />
             <Component {...pageProps} />
-            <Footer />
+            <Footer topBorder={showFooterTopBorder} />
           </HorizontalPadding>
         </DeviceWrapper>
       </NoSsrWrapper>

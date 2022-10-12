@@ -1,20 +1,28 @@
 import React from 'react';
-import Device from '../../constants/device';
-import { useDeviceContext } from '../../context/device';
 import styled from 'styled-components';
+
+import Marginer from '../Marginer';
 import FooterDesktop from './FooterDesktop';
 import FooterLaptop from './FooterLaptop';
 import FooterMobile from './FooterMobile';
 import FooterTablet from './FooterTablet';
-import Marginer from '../Marginer';
+
+import Device from '../../constants/device';
+
+import { useDeviceContext } from '../../context/device';
+import StraightLine from '../StraightLine';
 
 interface FooterProps {
+  topBorder: boolean;
+}
+
+interface FooterContainerProps {
   device?: Device;
 }
 
 const FooterContainer = styled.header`
   display: grid;
-  grid-template-columns: ${(props: FooterProps) => {
+  grid-template-columns: ${(props: FooterContainerProps) => {
     switch (props.device) {
       case Device.DESKTOP: {
         return '28fr 34fr 38fr';
@@ -39,11 +47,13 @@ const Margin = styled.div`
   grid-column: 1 / span 3;
 `;
 
-const Footer = () => {
+const Footer: React.FC<FooterProps> = ({ topBorder }) => {
   const device = useDeviceContext();
 
   return (
     <FooterContainer device={device}>
+      {topBorder && <StraightLine />}
+
       {(() => {
         switch (device) {
           case Device.DESKTOP: {
