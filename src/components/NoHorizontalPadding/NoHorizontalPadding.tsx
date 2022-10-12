@@ -8,15 +8,9 @@ interface NoHorizontalPaddingProps {
 const NoHorizontalPaddingContainer = styled.div`
   width: 100vw;
   max-width: 1920px;
-  transform: translateX(-3.125%);
-
-  @media only screen and (min-width: 640px) {
-    transform: translateX(-4%);
-  }
-
-  @media only screen and (min-width: 1000px) {
-    transform: translateX(-6.25%);
-  }
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
 `;
 
 const NoHorizontalPadding: React.FC<NoHorizontalPaddingProps> = ({ children }) => {
