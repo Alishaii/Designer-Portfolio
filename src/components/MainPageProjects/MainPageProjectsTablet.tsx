@@ -62,7 +62,14 @@ const MainPageProjectsTablet = () => {
         {projects.map((item, index) => (
           <ProjectItem key={index}>
             <ImageContainer>
-              <Image layout="responsive" src={item.img} alt="" width={item.imgWidth} height={item.imgHeight} />
+              <Image
+                layout="responsive"
+                src={item.img}
+                alt=""
+                width={item.imgWidth}
+                height={item.imgHeight}
+                placeholder="blur"
+              />
             </ImageContainer>
             <Marginer margin={40} />
 

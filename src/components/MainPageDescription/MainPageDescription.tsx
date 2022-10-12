@@ -5,6 +5,7 @@ import { useDeviceContext } from '../../context/device';
 import Device from '../../constants/device';
 import Button from '../Button';
 import Marginer from '../Marginer';
+import photo from '../../../public/images/MainPage/photo.png';
 
 const MainPageDescriptionContainer = styled.div`
   grid-column: 1 / span 3;
@@ -73,7 +74,7 @@ const PDF = styled.p`
 const Interior = (
   <>
     <ImageContainer>
-      <Image alt="" src="/images/MainPage/photo.png" width={470} height={500} layout="responsive" />
+      <Image alt="" src={photo} width={470} height={500} layout="responsive" placeholder="blur" />
     </ImageContainer>
 
     <Description>

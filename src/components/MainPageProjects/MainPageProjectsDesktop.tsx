@@ -91,7 +91,7 @@ const MainPageProjectsDesktop = () => {
               </ProjectDescriptionContainerLeft>
 
               <ImageContainerRight>
-                <Image src={item.img} alt="" width={item.imgWidth} height={item.imgHeight}></Image>
+                <Image src={item.img} alt="" width={item.imgWidth} height={item.imgHeight} placeholder="blur"></Image>
               </ImageContainerRight>
 
               <Margin>
