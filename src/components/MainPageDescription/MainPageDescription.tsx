@@ -103,7 +103,7 @@ const Interior = (
         <Resume>
           <Button
             trueButton
-            link="https://drive.google.com/uc?export=download&id=1MrVm1Jn2eL-IEYrvbv5RfpHjJcTjbOJE"
+            link="https://drive.google.com/uc?export=download&id=1OUKc5Jw7yHHpDv6hsasZ9aPtxuIDN2te"
             text={'Resume'}
           />
           <PDF>.pdf</PDF>
