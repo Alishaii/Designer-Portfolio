@@ -72,6 +72,7 @@ const ProblemGoalsDescription = styled.div`
   padding-right: 2%;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 `;
 
 const ProblemGoalsDescriptionItem = styled.div`
@@ -99,6 +100,7 @@ const ProblemTasksDescription = styled.div`
   padding-right: 2%;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 `;
 
 const ProblemTaskDescriptionItem = styled.div`

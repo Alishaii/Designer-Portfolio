@@ -71,6 +71,7 @@ const ProblemGoalsDescription = styled.div`
 const ProblemGoalsDescriptionItem = styled.div`
   display: flex;
   align-items: flex-start;
+  gap: 10px;
 `;
 
 const ProblemGoalsDescriptionItemText = styled.p``;
@@ -98,6 +99,7 @@ const ProblemTasksDescription = styled.div`
 const ProblemTaskDescriptionItem = styled.div`
   display: flex;
   align-items: flex-start;
+  gap: 10px;
 `;
 
 const ProblemTaskDescriptionItemText = styled.p``;
