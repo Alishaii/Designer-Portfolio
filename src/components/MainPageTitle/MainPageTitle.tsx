@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Device from '../../constants/device';
 import { useDeviceContext } from '../../context/device';
+import EaseInWrapper from '../EaseInWrapper';
 
 interface MainPageTitleProps {
   device?: Device;
@@ -49,13 +50,15 @@ const MainPageTitle = () => {
 
   return (
     <MainPageTitleContainer device={device} id="main">
-      <TopText>
-        HEY, I&lsquo;M <Italic>ALINA</Italic>
-      </TopText>
+      <EaseInWrapper>
+        <TopText>
+          HEY, I&lsquo;M <Italic>ALINA</Italic>
+        </TopText>
 
-      <BottomText>
-        <Italic>WELCOME</Italic>
-      </BottomText>
+        <BottomText>
+          <Italic>WELCOME</Italic>
+        </BottomText>
+      </EaseInWrapper>
     </MainPageTitleContainer>
   );
 };
