@@ -89,7 +89,11 @@ const MainPageProjectsDesktop = () => {
                 <ProjectDescription>{item.description}</ProjectDescription>
                 <Marginer margin={26} />
 
-                <Button link={item.href} trueButton text={'see more'}></Button>
+                <Button
+                  link={item.buttonText === 'see more' ? item.href : undefined}
+                  trueButton
+                  text={item.buttonText}
+                ></Button>
               </ProjectDescriptionContainerLeft>
 
               <ImageContainerRight>
@@ -129,7 +133,11 @@ const MainPageProjectsDesktop = () => {
                 <ProjectDescription>{item.description}</ProjectDescription>
                 <Marginer margin={26} />
 
-                <Button link={item.href} trueButton text={'see more'}></Button>
+                <Button
+                  link={item.buttonText === 'see more' ? item.href : undefined}
+                  trueButton
+                  text={item.buttonText}
+                ></Button>
               </ProjectDescriptionContainerRight>
 
               <Margin>

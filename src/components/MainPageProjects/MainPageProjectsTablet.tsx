@@ -83,7 +83,11 @@ const MainPageProjectsTablet = () => {
             <ProjectDescription>{item.description}</ProjectDescription>
             <Marginer margin={20} />
 
-            <Button link={item.href} trueButton text={'see more'}></Button>
+            <Button
+              link={item.buttonText === 'see more' ? item.href : undefined}
+              trueButton
+              text={item.buttonText}
+            ></Button>
           </ProjectItem>
         ))}
       </MainPageProjectsTabletContainer>

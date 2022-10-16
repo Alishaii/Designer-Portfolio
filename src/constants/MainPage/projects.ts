@@ -10,7 +10,8 @@ export const projects = [
     img: hoobImg,
     imgWidth: 654,
     imgHeight: 474,
-    href: '/projects/hoob'
+    href: '/projects/hoob',
+    buttonText: 'see more'
   },
   {
     name: 'Minimal',
@@ -19,7 +20,8 @@ export const projects = [
     img: minimalImg,
     imgWidth: 653,
     imgHeight: 578,
-    href: '/projects/minimal'
+    href: '/projects/minimal',
+    buttonText: 'see more'
   },
   {
     name: 'Denge',
@@ -28,6 +30,7 @@ export const projects = [
     img: dengeImg,
     imgWidth: 721,
     imgHeight: 443,
-    href: '/projects/denge'
+    href: '/projects/denge',
+    buttonText: 'comming soon'
   }
 ];
