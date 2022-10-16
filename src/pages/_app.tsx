@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import DeviceWrapper from '../context/device';
 import NoSsrWrapper from '../components/NoSsrWrapper';
 import Footer from '../components/Footer';
-import Script from 'next/script';
+import GoogleAnalytics from '../components/GoogleAnalytics';
 
 const CssReset = createGlobalStyle`
   *,
@@ -134,19 +134,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
-      />
-
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
-        `}
-      </Script>
+      <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
 
       <CssReset />
       <GlobalStyles />
