@@ -86,8 +86,7 @@ const Interior = (
         a short time, I decided to move into the field of web design. Namely UX and UI. It became interesting
         for me to learn design from the side of bissnes, psychology and marketing. <br />
         <br />
-        Dynamic and motivated professional with a proven record of generating and building relationships, managing
-        projects from concept to completion. <br />
+        I offer a solution to various business problems with the help of modern design and competent UX. <br />
         <br />
       </Paragraph>
 
