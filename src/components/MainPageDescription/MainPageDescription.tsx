@@ -42,6 +42,10 @@ const ImageContainer = styled.div`
 
 const Description = styled.div`
   flex: 1;
+  
+  @media only screen and (min-width: 1600px) {
+    padding-right: 18%;
+  }
 `;
 
 const Paragraph = styled.p`
