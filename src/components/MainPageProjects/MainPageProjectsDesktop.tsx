@@ -9,11 +9,27 @@ import MainPageSectionTitle from '../MainPageSectionTitle';
 
 import { projects } from '../../constants/MainPage/projects';
 
+const ImageContainerLeft = styled.div`
+  padding-right: 5%;
+`;
+
+const ImageContainerRight = styled.div`
+  padding-left: 5%;
+`;
+
 const MainPageProjectsDesktopContainer = styled.div`
   grid-column: 1 / span 3;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  ${ImageContainerLeft}, ${ImageContainerRight} {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(0.97);
+    }
+  }
 `;
 
 const Title = styled.div`
@@ -31,14 +47,6 @@ const ProjectDescriptionContainerLeft = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: start;
-`;
-
-const ImageContainerLeft = styled.div`
-  padding-right: 5%;
-`;
-
-const ImageContainerRight = styled.div`
-  padding-left: 5%;
 `;
 
 const ProjectDescriptionContainerRight = styled.div`
@@ -96,8 +104,8 @@ const MainPageProjectsDesktop = () => {
                 ></Button>
               </ProjectDescriptionContainerLeft>
 
-              <ImageContainerRight>
-                <Link href={item.href}>
+              <Link href={item.href}>
+                <ImageContainerRight>
                   <Image
                     src={item.img}
                     alt=""
@@ -105,8 +113,8 @@ const MainPageProjectsDesktop = () => {
                     height={item.imgHeight}
                     placeholder={'blur'}
                   ></Image>
-                </Link>
-              </ImageContainerRight>
+                </ImageContainerRight>
+              </Link>
 
               <Margin>
                 <Marginer margin={60} />
@@ -114,8 +122,8 @@ const MainPageProjectsDesktop = () => {
             </React.Fragment>
           ) : (
             <React.Fragment key={index}>
-              <ImageContainerLeft>
-                <Link href={item.href}>
+              <Link href={item.href}>
+                <ImageContainerLeft>
                   <Image
                     src={item.img}
                     alt=""
@@ -123,8 +131,8 @@ const MainPageProjectsDesktop = () => {
                     height={item.imgHeight}
                     placeholder={'blur'}
                   ></Image>
-                </Link>
-              </ImageContainerLeft>
+                </ImageContainerLeft>
+              </Link>
 
               <ProjectDescriptionContainerRight>
                 <ProjectName>{item.name}</ProjectName>

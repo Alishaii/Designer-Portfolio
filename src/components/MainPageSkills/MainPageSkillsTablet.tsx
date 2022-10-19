@@ -23,7 +23,7 @@ const Margin = styled.div`
 const commonStyles = `
   border-top: 1px solid black;
   padding-top: 20px;
-  padding-right: 100px;
+  padding-right: 60px;
   min-height: 130px;
 `;
 

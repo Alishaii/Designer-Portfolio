@@ -89,17 +89,32 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
-    max-width: 100%;
 
   }
 
   body {
-    max-width: 1920px;
+    
     margin: 0 auto;
 
     font-family: Plain Light;
     color: black;
     overflow-x: hidden;
+
+    max-width: 380px;
+
+    @media only screen and (min-width: 640px) {
+      max-width: 640px;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      max-width: 1000px;
+    }
+
+    @media only screen and (min-width: 1600px) {
+      max-width: 1600px;
+    }
+
+    ${() => window.location.href.includes('/projects/')? `max-width: 1920px !important` : ''} //FIXME:
   }
 `;
 

@@ -1,10 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
-import { useDeviceContext } from '../../context/device';
-import Device from '../../constants/device';
+
 import Button from '../Button';
 import Marginer from '../Marginer';
+
+import { useDeviceContext } from '../../context/device';
+
+import Device from '../../constants/device';
+import * as mainPageDescription from '../../constants/MainPage/description';
+
 import photo from '../../../public/images/MainPage/photo.png';
 
 const MainPageDescriptionContainer = styled.div`
@@ -37,12 +42,17 @@ const ImageContainer = styled.div`
 
 const Description = styled.div`
   flex: 1;
+  
+  @media only screen and (min-width: 1600px) {
+    padding-right: 18%;
+  }
 `;
 
 const Paragraph = styled.p`
   font-weight: 300;
   font-size: 16px;
   line-height: 110%;
+  white-space: pre-line;
 `;
 
 const Italic = styled.span`
@@ -79,19 +89,14 @@ const Interior = (
 
     <Description>
       <Paragraph>
-        It&lsquo;s my portfolio! I am a designer from Ukraine. You can see my progress over the years of my practice
-        in web design.
-        <br />
-        <br /> I started my career as a graphic designer, graduated from the academy and after working in this field for
-        a short time, I decided to move into the field of web design. Namely UX and UI. It became interesting
-        for me to learn design from the side of bissnes, psychology and marketing. <br />
-        <br />
-        I offer a solution to various business problems with the help of modern design and competent UX. <br />
+        {mainPageDescription.firstPart} <br />
+        <br /> {mainPageDescription.secondPart} <br />
+        <br /> {mainPageDescription.thirdPart} <br />
         <br />
       </Paragraph>
 
       <Paragraph>
-        <Italic>Now I&lsquo;m looking for a job in the field of ux/ui design.</Italic>
+        <Italic>{mainPageDescription.fourthPart}</Italic>
       </Paragraph>
 
       <Marginer margin={50} />

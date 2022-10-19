@@ -17,7 +17,13 @@ const MainPageProjectsTabletContainer = styled.div`
   row-gap: 90px;
 `;
 
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+`;
 
 const ProjectItem = styled.div`
   &:nth-child(3) ${ImageContainer} {

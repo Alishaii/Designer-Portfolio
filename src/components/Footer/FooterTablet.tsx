@@ -19,7 +19,6 @@ const LinkedinAndEmail = styled.p`
 
 const PhoneAndArrowUp = styled.div`
   min-height: 180px;
-  border-top: 1px solid black;
 
   font-weight: 300;
   font-size: 20px;
