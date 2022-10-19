@@ -84,7 +84,7 @@ const Interior = (
         <br />
         <br /> I started my career as a graphic designer, graduated from the academy and after working in this field for
         a short time, I decided to move into the field of web design. Namely UX and UI. It became interesting
-        for me to learn design from the side of bissnes, psychology and marketing. <br />
+        for me to learn design from the side of business, psychology and marketing. <br />
         <br />
         I offer a solution to various business problems with the help of modern design and competent UX. <br />
         <br />
