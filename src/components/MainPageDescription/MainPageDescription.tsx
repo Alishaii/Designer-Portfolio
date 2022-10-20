@@ -10,7 +10,7 @@ import { useDeviceContext } from '../../context/device';
 import Device from '../../constants/device';
 import * as mainPageDescription from '../../constants/MainPage/description';
 
-import photo from '../../../public/images/MainPage/photo.png';
+import photo from '../../../public/images/MainPage/photo.jpg';
 
 const MainPageDescriptionContainer = styled.div`
   grid-column: 1 / span 3;
