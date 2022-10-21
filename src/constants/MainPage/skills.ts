@@ -1,5 +1,5 @@
 export const programs = ['Figma', 'Photoshop', 'Illustrator', 'InDesign', 'Tilda'];
-export const personalQualities = ['Creativity', 'Hard Working', 'Curiosity'];
+export const personalQualities = ['Creativity', 'Hard Working', 'Curiosity', 'Analytic scills'];
 export const interests = ['Sports', 'Reading', 'Drawing'];
 
 export const programsDescription =
