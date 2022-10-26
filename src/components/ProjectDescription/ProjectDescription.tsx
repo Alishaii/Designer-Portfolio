@@ -9,26 +9,55 @@ import ProjectDescriptionTablet from './ProjectDescriptionTablet';
 
 export interface ProjectDescriptionProps {
   projectDescription: ProjectDescriptionContent;
+  noProblemSolutionResearchGrid?: boolean;
 }
 
-const ProjectDescription: React.FC<ProjectDescriptionProps> = ({ projectDescription }) => {
+const ProjectDescription: React.FC<ProjectDescriptionProps> = ({
+  projectDescription,
+  noProblemSolutionResearchGrid
+}) => {
   const device = useDeviceContext();
 
   switch (device) {
     case Device.DESKTOP: {
-      return <ProjectDescriptionDesktop projectDescription={projectDescription} />;
+      return (
+        <ProjectDescriptionDesktop
+          projectDescription={projectDescription}
+          noProblemSolutionResearchGrid={noProblemSolutionResearchGrid}
+        />
+      );
     }
     case Device.LAPTOP: {
-      return <ProjectDescriptionLaptop projectDescription={projectDescription} />;
+      return (
+        <ProjectDescriptionLaptop
+          projectDescription={projectDescription}
+          noProblemSolutionResearchGrid={noProblemSolutionResearchGrid}
+        />
+      );
     }
     case Device.TABLET: {
-      return <ProjectDescriptionTablet projectDescription={projectDescription} />;
+      return (
+        <ProjectDescriptionTablet
+          projectDescription={projectDescription}
+          noProblemSolutionResearchGrid={noProblemSolutionResearchGrid}
+        />
+      );
     }
     case Device.MOBILE: {
-      return <ProjectDescriptionMobile projectDescription={projectDescription} />;
+      return (
+        <ProjectDescriptionMobile
+          projectDescription={projectDescription}
+          noProblemSolutionResearchGrid={noProblemSolutionResearchGrid}
+        />
+      );
     }
     default: {
-      return <ProjectDescriptionMobile projectDescription={projectDescription} />;
+      return (
+        <ProjectDescriptionMobile
+          projectDescription={projectDescription}
+          noProblemSolutionResearchGrid={noProblemSolutionResearchGrid}
+        />
+      );
     }
   }
 };

@@ -142,7 +142,10 @@ const ResearchDescription = styled.p`
   line-height: 110%;
 `;
 
-const ProjectDescriptionLaptop: React.FC<ProjectDescriptionProps> = ({ projectDescription }) => {
+const ProjectDescriptionLaptop: React.FC<ProjectDescriptionProps> = ({
+  projectDescription,
+  noProblemSolutionResearchGrid
+}) => {
   return (
     <>
       <Margin>
@@ -168,55 +171,61 @@ const ProjectDescriptionLaptop: React.FC<ProjectDescriptionProps> = ({ projectDe
         <Marginer margin={50} />
       </Margin>
 
-      <Problem>
-        <ProblemTitle>Problem</ProblemTitle>
-        <Marginer margin={8} />
+      {!noProblemSolutionResearchGrid && (
+        <Problem>
+          <ProblemTitle>Problem</ProblemTitle>
+          <Marginer margin={8} />
 
-        <ProblemDescription>{projectDescription.problem.description}</ProblemDescription>
-        <Marginer margin={30} />
+          <ProblemDescription>{projectDescription.problem.description}</ProblemDescription>
+          <Marginer margin={30} />
 
-        <ProblemGoals>
-          <ProblemGoalsTitle>Goals</ProblemGoalsTitle>
-          <Marginer margin={10} />
+          <ProblemGoals>
+            <ProblemGoalsTitle>Goals</ProblemGoalsTitle>
+            <Marginer margin={10} />
 
-          <ProblemGoalsDescription>
-            {projectDescription.problem.goals.map((item, index) => (
-              <ProblemGoalsDescriptionItem key={index}>
-                <ProblemGoalsDescriptionItemDot>•</ProblemGoalsDescriptionItemDot>
-                <ProblemGoalsDescriptionItemText>{item}</ProblemGoalsDescriptionItemText>
-              </ProblemGoalsDescriptionItem>
-            ))}
-          </ProblemGoalsDescription>
-        </ProblemGoals>
-        <Marginer margin={20} />
+            <ProblemGoalsDescription>
+              {projectDescription.problem.goals.map((item, index) => (
+                <ProblemGoalsDescriptionItem key={index}>
+                  <ProblemGoalsDescriptionItemDot>•</ProblemGoalsDescriptionItemDot>
+                  <ProblemGoalsDescriptionItemText>{item}</ProblemGoalsDescriptionItemText>
+                </ProblemGoalsDescriptionItem>
+              ))}
+            </ProblemGoalsDescription>
+          </ProblemGoals>
+          <Marginer margin={20} />
 
-        <ProblemTasks>
-          <ProblemTasksTitle>Tasks</ProblemTasksTitle>
-          <Marginer margin={10} />
+          <ProblemTasks>
+            <ProblemTasksTitle>Tasks</ProblemTasksTitle>
+            <Marginer margin={10} />
 
-          <ProblemTasksDescription>
-            {projectDescription.problem.tasks.map((item, index) => (
-              <ProblemTaskDescriptionItem key={index}>
-                <ProblemTaskDescriptionItemDot>•</ProblemTaskDescriptionItemDot>
-                <ProblemTaskDescriptionItemText>{item}</ProblemTaskDescriptionItemText>
-              </ProblemTaskDescriptionItem>
-            ))}
-          </ProblemTasksDescription>
-        </ProblemTasks>
-      </Problem>
+            <ProblemTasksDescription>
+              {projectDescription.problem.tasks.map((item, index) => (
+                <ProblemTaskDescriptionItem key={index}>
+                  <ProblemTaskDescriptionItemDot>•</ProblemTaskDescriptionItemDot>
+                  <ProblemTaskDescriptionItemText>{item}</ProblemTaskDescriptionItemText>
+                </ProblemTaskDescriptionItem>
+              ))}
+            </ProblemTasksDescription>
+          </ProblemTasks>
+        </Problem>
+      )}
 
-      <Solution>
-        <SolutionTitle>Solution</SolutionTitle>
-        <Marginer margin={8} />
-        <SolutionDescription>{projectDescription.solution}</SolutionDescription>
-        <Marginer margin={50} />
-      </Solution>
+      {!noProblemSolutionResearchGrid && (
+        <Solution>
+          <SolutionTitle>Solution</SolutionTitle>
+          <Marginer margin={8} />
+          <SolutionDescription>{projectDescription.solution}</SolutionDescription>
+          <Marginer margin={50} />
+        </Solution>
+      )}
 
-      <Research>
-        <ResearchTitle>Research</ResearchTitle>
-        <Marginer margin={8} />
-        <ResearchDescription>{projectDescription.research}</ResearchDescription>
-      </Research>
+      {!noProblemSolutionResearchGrid && (
+        <Research>
+          <ResearchTitle>Research</ResearchTitle>
+          <Marginer margin={8} />
+          <ResearchDescription>{projectDescription.research}</ResearchDescription>
+        </Research>
+      )}
     </>
   );
 };
