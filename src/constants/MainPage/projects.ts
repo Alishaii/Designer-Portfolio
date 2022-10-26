@@ -1,6 +1,7 @@
 import hoobImg from '../../../public/images/MainPage/projects/hoob.png';
 import minimalImg from '../../../public/images/MainPage/projects/minimal.png';
 import dengeImg from '../../../public/images/MainPage/projects/denge.png';
+import secrImg from '../../../public/images/MainPage/projects/secr.png';
 
 export const projects = [
   {
@@ -32,5 +33,15 @@ export const projects = [
     imgHeight: 443,
     href: '/projects/denge',
     buttonText: 'comming soon'
+  },
+  {
+    name: 'SECR',
+    description:
+      'An information site for the general development of youth and a knowledge resource for students. Can help improve your knowledge in the field.',
+    img: secrImg,
+    imgWidth: 653,
+    imgHeight: 490,
+    href: '/projects/secr',
+    buttonText: 'see more'
   }
 ];
