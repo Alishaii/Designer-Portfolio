@@ -19,7 +19,7 @@ const MinimalProjectContentDesktop = () => {
   return (
     <MinimalProjectContentDesktopContainer>
       <NoHorizontalPadding>
-        <Image src={imageOne} priority alt="" width={1601} height={3289} layout={'responsive'} placeholder={'blur'} />
+        <Image src={imageOne} priority alt="" width={1601} height={3259} layout={'responsive'} placeholder={'blur'} />
       </NoHorizontalPadding>
 
       <Image src={imageTwo} priority alt="" width={1400} height={390} layout={'responsive'} placeholder={'blur'} />
@@ -37,7 +37,7 @@ const MinimalProjectContentDesktop = () => {
       </NoHorizontalPadding>
 
       <NoHorizontalPadding>
-        <Image src={imageSix} priority alt="" width={1600} height={1225} layout={'responsive'} placeholder={'blur'} />
+        <Image src={imageSix} priority alt="" width={1600} height={1305} layout={'responsive'} placeholder={'blur'} />
       </NoHorizontalPadding>
     </MinimalProjectContentDesktopContainer>
   );
