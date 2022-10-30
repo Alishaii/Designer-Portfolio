@@ -1,1 +1,1 @@
-export const creativeAreas = ['Landing Page', 'E-comerce Website', 'Corporate Website'];
+export const creativeAreas = ['UX/UI Design', 'Web Design', 'Graphic Design'];
